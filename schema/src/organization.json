@@ -1,0 +1,56 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://prosystemengineering.com/#organization",
+  "name": "Prosystem Engineering S.r.l.",
+  "alternateName": ["Prosystem Engineering", "Pro System Engineering"],
+  "url": "https://prosystemengineering.com/",
+  "logo": "https://prosystemengineering.com/wp-content/uploads/SOSTITUIRE-logo.png",
+  "image": "https://prosystemengineering.com/wp-content/uploads/SOSTITUIRE-foto-sede-o-team.jpg",
+  "description": "Studio di ingegneria e consulenza industriale di Pinerolo (TO), attivo dal 1996: sicurezza delle macchine, marcatura CE, adeguamento delle macchine al D.Lgs. 81/08, revamping di macchinari industriali, progettazione meccanica, verifica di impianti di sollevamento, consulenza qualità e ambiente, formazione.",
+  "foundingDate": "1996",
+  "vatID": "IT10307730019",
+  "telephone": "+39 0121 398628",
+  "faxNumber": "+39 0121 390735",
+  "email": "info@prosystemengineering.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Vecchia di Buriasco 10/D",
+    "postalCode": "10064",
+    "addressLocality": "Pinerolo",
+    "addressRegion": "TO",
+    "addressCountry": "IT"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Piemonte" },
+    { "@type": "Country", "name": "Italia" }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "telephone": "+39 0121 398628",
+    "email": "info@prosystemengineering.com",
+    "areaServed": "IT",
+    "availableLanguage": ["it", "en"]
+  },
+  "knowsAbout": [
+    "Revamping di macchinari industriali",
+    "Adeguamento macchine al D.Lgs. 81/2008",
+    "Allegato V D.Lgs. 81/2008",
+    "Marcatura CE delle macchine",
+    "Direttiva Macchine 2006/42/CE",
+    "Regolamento (UE) 2023/1230",
+    "Modifica sostanziale delle macchine",
+    "Valutazione dei rischi UNI EN ISO 12100",
+    "Sicurezza funzionale UNI EN ISO 13849-1",
+    "Verifica impianti di sollevamento",
+    "Progettazione meccanica",
+    "Perizie tecniche Industria 4.0",
+    "Sistemi di gestione qualità e ambiente",
+    "Formazione sulla sicurezza sul lavoro"
+  ],
+  "sameAs": [
+    "https://it.linkedin.com/company/prosystem-engineering",
+    "https://www.ice.it/en/my-home/find-your-italian-partner/company-details/545930/Prosystem-Engineering-S.r.l."
+  ]
+}

@@ -1,0 +1,38 @@
+# robots.txt — proposta per prosystemengineering.com
+#
+# Il robots.txt standard di WordPress permette già l'accesso a tutti i bot.
+# Queste regole servono solo se oggi qualcosa blocca i crawler AI
+# (plugin di sicurezza, vecchie regole, CDN). Verificare prima il file attuale:
+# https://prosystemengineering.com/robots.txt
+#
+# Bot di RICERCA e CITAZIONE AI: fanno comparire il sito nelle risposte
+# di ChatGPT Search, Perplexity, Claude, Copilot. Consigliato: consentire.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: bingbot
+User-agent: Googlebot
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# Bot di ADDESTRAMENTO dei modelli: scelta aziendale.
+# Consentirli aumenta la probabilità che i modelli "conoscano" Prosystem;
+# bloccarli non toglie il sito dalla ricerca di Google né dalle AI Overviews.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# Tutti gli altri
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# Verificare l'URL della sitemap generata dal plugin SEO
+# (Yoast / Rank Math: sitemap_index.xml — WordPress senza plugin: wp-sitemap.xml)
+Sitemap: https://prosystemengineering.com/sitemap_index.xml

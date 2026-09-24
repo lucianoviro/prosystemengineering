@@ -1,0 +1,32 @@
+{
+  "url": "https://prosystemengineering.com/revamping-macchinari-industriali/",
+  "faq_source": "02-landing-revamping-macchinari-industriali.md",
+  "service": {
+    "@type": "Service",
+    "name": "Revamping di macchinari industriali",
+    "serviceType": "Revamping e ammodernamento di macchine e impianti industriali",
+    "description": "Ammodernamento di macchine e linee esistenti (meccanica, quadro elettrico, automazione, sicurezza funzionale, interconnessione 4.0) con valutazione dei rischi, verifica della modifica sostanziale, fascicolo tecnico e, quando necessario, nuova marcatura CE.",
+    "provider": { "@id": "https://prosystemengineering.com/#organization" },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Piemonte" },
+      { "@type": "Country", "name": "Italia" }
+    ],
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Aziende manifatturiere e utilizzatori di macchine industriali"
+    },
+    "isRelatedTo": { "@id": "https://prosystemengineering.com/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/#service" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Interventi di revamping",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Revamping meccanico" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rifacimento quadro elettrico secondo CEI EN 60204-1" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aggiornamento di automazione, PLC e HMI" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sicurezza funzionale UNI EN ISO 13849-1" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interconnessione Industria 4.0" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verifica della modifica sostanziale e marcatura CE" } }
+      ]
+    }
+  }
+}

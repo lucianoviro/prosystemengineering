@@ -1,0 +1,32 @@
+{
+  "url": "https://prosystemengineering.com/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/",
+  "faq_source": "03-landing-adeguamento-macchine-dlgs-81-08.md",
+  "service": {
+    "@type": "Service",
+    "name": "Adeguamento macchine al D.Lgs. 81/08 e marcatura CE",
+    "serviceType": "Verifica di conformità e messa a norma di macchine e attrezzature di lavoro",
+    "description": "Verifica di macchine con e senza marcatura CE rispetto al D.Lgs. 81/08 (Allegato V) e alla normativa di prodotto, valutazione dei rischi, progettazione degli interventi di messa a norma e documentazione tecnica di conformità.",
+    "provider": { "@id": "https://prosystemengineering.com/#organization" },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Piemonte" },
+      { "@type": "Country", "name": "Italia" }
+    ],
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Datori di lavoro, RSPP e uffici tecnici di aziende che utilizzano macchine"
+    },
+    "isRelatedTo": { "@id": "https://prosystemengineering.com/revamping-macchinari-industriali/#service" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi di adeguamento macchine",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verifica dei requisiti dell'Allegato V D.Lgs. 81/08 per macchine non marcate CE" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verifica di conformità di macchine marcate CE" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Valutazione dei rischi delle macchine UNI EN ISO 12100" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Progettazione di ripari e circuiti di sicurezza" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Relazione tecnica per macchine usate (art. 72 D.Lgs. 81/08)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marcatura CE di insiemi di macchine e macchine modificate" } }
+      ]
+    }
+  }
+}
