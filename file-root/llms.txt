@@ -7,7 +7,7 @@ Da non confondere con ProSystem (costruttore di macchine per packaging) né con 
 
 ## Servizi
 
-- [Revamping di macchinari industriali](https://prosystemengineering.com/revamping-macchinari-industriali/): ammodernamento di macchine e linee esistenti (meccanica, quadro elettrico, automazione, sicurezza funzionale, interconnessione 4.0), con verifica della modifica sostanziale e, se necessario, nuova marcatura CE.
+- [Revamping di macchinari industriali](https://prosystemengineering.com/revamping-macchinari-industriali/): progettazione del revamping di macchine e impianti industriali esistenti (analisi, studio di fattibilità, progettazione meccanica, calcoli strutturali, analisi dei rischi), con valutazione degli effetti della modifica sostanziale sulla Marcatura CE.
 - [Adeguamento macchine al D.Lgs. 81/08 e marcatura CE](https://prosystemengineering.com/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/): verifica e messa a norma di macchine con e senza marcatura CE, Allegato V D.Lgs. 81/08, valutazione dei rischi, documentazione per macchine usate (art. 72).
 - [Marcatura CE](https://prosystemengineering.com/marcatura-ce/): valutazione dei rischi, fascicolo tecnico, manuali e dichiarazione di conformità per costruttori di macchine.
 - [Verifica impianti di sollevamento](https://prosystemengineering.com/verifica-impianti-di-sollevamento/): verifiche su apparecchi e impianti di sollevamento.

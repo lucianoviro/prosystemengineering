@@ -4,28 +4,74 @@
   "service": {
     "@type": "Service",
     "name": "Revamping di macchinari industriali",
-    "serviceType": "Revamping e ammodernamento di macchine e impianti industriali",
-    "description": "Ammodernamento di macchine e linee esistenti (meccanica, quadro elettrico, automazione, sicurezza funzionale, interconnessione 4.0) con valutazione dei rischi, verifica della modifica sostanziale, fascicolo tecnico e, quando necessario, nuova marcatura CE.",
-    "provider": { "@id": "https://prosystemengineering.com/#organization" },
+    "serviceType": "Revamping, riprogettazione e adeguamento di macchine e impianti industriali esistenti",
+    "description": "Progettazione del revamping di macchinari e impianti industriali: analisi della macchina esistente, studio di fattibilità, progettazione meccanica con disegni costruttivi e calcoli strutturali, analisi dei rischi, valutazione degli effetti della modifica sulla Marcatura CE e sulla documentazione, supporto alla realizzazione e al collaudo.",
+    "provider": {
+      "@id": "https://prosystemengineering.com/#organization"
+    },
     "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Piemonte" },
-      { "@type": "Country", "name": "Italia" }
+      {
+        "@type": "AdministrativeArea",
+        "name": "Piemonte"
+      },
+      {
+        "@type": "Country",
+        "name": "Italia"
+      }
     ],
     "audience": {
       "@type": "BusinessAudience",
-      "audienceType": "Aziende manifatturiere e utilizzatori di macchine industriali"
+      "audienceType": "Aziende che utilizzano o costruiscono macchine e impianti industriali (metalmeccanico, alimentare, farmaceutico e altri settori)"
     },
-    "isRelatedTo": { "@id": "https://prosystemengineering.com/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/#service" },
+    "isRelatedTo": {
+      "@id": "https://prosystemengineering.com/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/#service"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Interventi di revamping",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Revamping meccanico" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rifacimento quadro elettrico secondo CEI EN 60204-1" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aggiornamento di automazione, PLC e HMI" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sicurezza funzionale UNI EN ISO 13849-1" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interconnessione Industria 4.0" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verifica della modifica sostanziale e marcatura CE" } }
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Analisi del macchinario esistente e sopralluogo"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Studio di fattibilità preliminare"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Progettazione meccanica, disegni costruttivi e calcoli strutturali"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Analisi dei rischi e sicurezza delle macchine"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Valutazione della modifica sostanziale, Marcatura CE e aggiornamento del Fascicolo Tecnico"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Supporto alla realizzazione, installazione, verifica e collaudo"
+          }
+        }
       ]
     }
   }

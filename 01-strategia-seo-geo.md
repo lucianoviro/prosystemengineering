@@ -14,13 +14,13 @@ più gli interventi di sito indispensabili perché rendano.
 
 ## 1. Premessa: cosa è stato analizzato
 
-Le pagine live **non erano raggiungibili** dall'ambiente di lavoro (dominio bloccato dalla policy di rete), quindi il loro codice e i testi attuali non sono stati letti. Questo kit si basa su:
+Il sito **non è raggiungibile** dall'ambiente di lavoro (dominio bloccato dalla policy di rete). L'analisi delle due landing si basa sull'export XML di WordPress del 29/09/2026 (contenuto, struttura Elementor e meta Yoast), integrato da:
 
 - informazioni pubbliche su Prosystem Engineering (servizi, sede, contatti, pagine indicizzate);
 - analisi dei risultati di ricerca per le keyword target e dei concorrenti;
 - normativa vigente al 24/09/2026 (D.Lgs. 81/08, Direttiva 2006/42/CE, Regolamento (UE) 2023/1230 applicabile dal 20/01/2027).
 
-I testi proposti sono **completi e pubblicabili**, ma vanno fusi con eventuali contenuti specifici già presenti nelle pagine (casi, foto, dati). La checklist al §7 elenca le verifiche da fare sulle pagine live.
+La landing revamping è stata riscritta sui contenuti reali (`02-…`). La landing adeguamento è ancora una bozza generica (`03-…`) da rifare sull'export. La checklist al §7 elenca le verifiche da fare sul sito live.
 
 ---
 
@@ -36,7 +36,8 @@ I testi proposti sono **completi e pubblicabili**, ma vanno fusi con eventuali c
 | 6 | **NAP non coerente** nelle directory: in alcune compare `info@prosystemingegneria.it` | Medio (SEO locale) | Allineare nome, indirizzo, telefono ed email su Google Business Profile, PagineBianche, LinkedIn, ICE e directory |
 | 7 | Versione inglese: la pagina è intitolata "**CE Making**" (refuso di *CE Marking*) e la home EN ha slug `/home-eng-nuova/` | Medio sul mercato estero | Correggere il titolo; valutare le versioni EN delle due landing con `hreflang` |
 | 8 | Refuso nello slug `/consulenza-quaita-ambiente/` | Basso | Correggere in `/consulenza-qualita-ambiente/` con 301 |
-| 9 | Nelle ricerche di prova le due landing **non comparivano** per le loro keyword | Da verificare | Controllo URL in Search Console: indicizzata? canonical corretto? |
+| 9 | Le due landing sono **molto recenti** (la landing revamping è stata creata il 15/09/2026): normale che non comparissero nelle ricerche di prova | Informativo | Controllo URL in Search Console: indicizzata? canonical corretto? |
+| 10 | **Entrambe le landing hanno titolo SEO, meta description e parola chiave della home** ("Prosystem Engineering \| Consulenza e progettazione", kw "consulenza"): sono duplicati l'una dell'altra e di un'altra pagina (ID 4734) | **Alto**: titoli e descrizioni duplicati, nessuna ottimizzazione per le keyword target | Nuovi valori per la revamping in `02-…` §2; per l'adeguamento in `03-…` |
 
 ---
 
