@@ -8,7 +8,7 @@ Procedura passo passo per applicare il kit alle due landing. I nomi dei menu pos
 
 1. **Backup** completo (database + file) o lavoro su un **ambiente di staging**.
 2. In Search Console esportare le query e le posizioni attuali delle due landing (*Prestazioni → Pagina*): serviranno per il confronto prima/dopo.
-3. Identificare il plugin SEO in uso (Yoast SEO, Rank Math, SEOPress…): le istruzioni sotto coprono Yoast e Rank Math.
+3. Il plugin SEO del sito è **ThinkRank** (verificato sul sorgente della landing revamping); le indicazioni su Yoast/Rank Math qui sotto vanno adattate ai suoi campi, che non ho visto.
 
 ---
 
@@ -78,7 +78,7 @@ Tre snippet già pronti, ciascuno con il suo tag `<script>`:
 Per gli snippet delle landing: un widget HTML in fondo alla pagina con lo snippet incollato. Lo schema nel `<body>` è valido.
 
 **Organization e plugin SEO**
-Yoast (e Rank Math) generano già un nodo Organization con lo stesso `@id` (`https://prosystemengineering.com/#organization`): i due blocchi vengono uniti da Google, quindi basta che i dati coincidano. Compilare comunque *Yoast → Impostazioni → Rappresentazione del sito* o *Rank Math → Titoli e Meta → SEO locale* con gli stessi nome, logo e dati.
+ThinkRank (come Yoast e Rank Math) genera già un nodo Organization con lo stesso `@id` (`https://prosystemengineering.com/#organization`): i due blocchi vengono uniti da Google, quindi basta che i dati coincidano. Compilare comunque *Yoast → Impostazioni → Rappresentazione del sito* o *Rank Math → Titoli e Meta → SEO locale* con gli stessi nome, logo e dati.
 
 **Validazione** (dopo la pubblicazione):
 - [Rich Results Test](https://search.google.com/test/rich-results): nessun errore.

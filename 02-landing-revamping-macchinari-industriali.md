@@ -2,14 +2,14 @@
 
 URL: `https://prosystemengineering.com/revamping-macchinari-industriali/` (ID pagina 6969)
 
-> **Versione 2**, basata sull'export WordPress del 29/09/2026 (contenuto, struttura Elementor e meta Yoast reali).
+> **Versione 2**, basata sull'export WordPress del 29/09/2026 (contenuto e struttura Elementor reali) e sul sorgente HTML della pagina pubblicata. **Il plugin SEO del sito è ThinkRank, non Yoast**.
 > Sostituisce la prima bozza, che ipotizzava interventi su quadri elettrici e PLC: la pagina reale è centrata su **progettazione meccanica, sicurezza e Marcatura CE**, e i testi seguono quel posizionamento.
 
 Come applicare le modifiche:
 
 | Cosa | Come | File |
 |---|---|---|
-| Titolo SEO, meta description, keyword | A mano in Yoast (§2) | — |
+| Meta description, titolo SEO, immagine social, lingua | A mano in ThinkRank (§2) | — |
 | Struttura titoli, nuovi blocchi, FAQ, link, alt, ancora mobile | Import del template Elementor e sostituzione del contenuto (§7) | `elementor/revamping-ottimizzata.json` |
 | Schema Service + FAQPage | Snippet nel `<head>` | `schema/revamping-macchinari-industriali.html` |
 | Autore, data, caso reale, controllo slider | A mano (§5): servono dati che solo Prosystem ha | — |
@@ -20,31 +20,31 @@ Come applicare le modifiche:
 
 | # | Rilievo | Impatto | Correzione |
 |---|---|---|---|
-| 1 | **Titolo SEO, meta description e parola chiave Yoast sono quelli della home**: "Prosystem Engineering \| Consulenza e progettazione", parola chiave "consulenza". La pagina è un duplicato (origine ID 4734). Lo stesso vale per la landing adeguamento | **Alto**: due pagine con lo stesso titolo e la stessa descrizione, nessuna ottimizzazione per "revamping" | Nuovi valori al §2 (a mano, Yoast) |
+| 1 | **Meta description generata a caso**: ThinkRank (l'unico plugin SEO attivo; i campi Yoast dell'export sono residui non usati) ricava la descrizione dall'inizio del testo, e nel sorgente risulta `AGGIORNA IL TUO IMPIANTO SENZA SOSTITUIRLO Il revamping di un macchinario industriale è l'intervento con cui una macchina o un impianto già in uso viene...` (maiuscolo, tagliata a metà frase). Stessa descrizione in Open Graph e Twitter. `og:image` è il logo, `og:locale` è `en_US` | **Alto**: è il testo mostrato nei risultati di ricerca e nelle condivisioni | Descrizione scritta a mano, immagine social e lingua (§2) |
 | 2 | **9 titoli H1** nel corpo (uno per sezione, più i due della sezione contatti duplicata), oltre all'H1 dello slider. Il primo titolo nel corpo, con la frase più importante, è un **H4**; nessun titolo contiene "macchinari industriali" in posizione di H1 | **Medio-alto**: la gerarchia non dice a Google e alle AI di cosa parla la pagina | Un solo H1 con la keyword, le sezioni diventano H2, i sottotitoli H3 (§3) |
 | 3 | I 4 bottoni CTA puntano a `#richiedi-una-valutazione`, ma la sezione con quell'ID è **nascosta su mobile** (esiste una copia separata per il mobile, senza ID) | **Alto sulle conversioni**: su telefono i bottoni molto probabilmente non scorrono al form (da provare) | Ancora su un elemento sempre visibile (§4) |
 | 4 | **Nessun link interno**: l'unico link è l'ancora al form. Nemmeno verso la landing adeguamento, pur citando D.Lgs. 81/08 e Marcatura CE | Medio: la pagina non passa né riceve autorità dalle pagine sorelle | Link nel testo della sezione sicurezza e nelle FAQ (§4) |
 | 5 | **Sezione contatti duplicata** (desktop e mobile): nell'HTML ci sono due volte titolo, indirizzo, mappa e lo stesso form (WPForms 6971), con ID del form duplicati | Medio: contenuto ripetuto, peso delle due mappe | Titoli della copia mobile declassati a testo. Per il resto vedi §5 |
-| 6 | **Testi alternativi**: le 6 icone dei passi hanno come alt il nome del file ("01@4x"); nel render in cache le immagini principali hanno alt vuoto, mentre in libreria multimediale hanno tutte lo stesso ("revamping macchine industriali") | Medio-basso | Alt descrittivi (§4) |
+| 6 | **Testi alternativi**: nel sorgente le 3 immagini principali hanno `alt=""`, le 6 icone dei passi `alt="01@4x.png"` (nome file) e l'immagine "Esperienza" il nome del file. L'import del template **non conserva gli alt** e ha ricreato le immagini in libreria con il suffisso `-1` | Medio-basso | Testo alternativo in Libreria media sulle nuove immagini (§5) |
 | 7 | **FAQ**: 7 domande numerate ("1. …") in un accordion i cui titoli non sono heading; il widget non genera schema FAQ. La risposta sulla Marcatura CE è corretta ma generica | Medio | Titoli H3, 9 domande, risposta CE precisa (§6) |
 | 8 | **Contenuti mancanti**: definizione in apertura, confronto revamping/retrofit/macchina nuova, definizione di modifica sostanziale e Regolamento 2023/1230, autore, data, fonti, caso reale | Medio (GEO): sono gli elementi che le AI citano | Aggiunti dove possibile (§4); il resto al §5 |
-| 9 | Nelle impostazioni compare anche un plugin di punteggio SEO (ThinkRank) accanto a Yoast | Da verificare: metadati o schema doppi nel `<head>` | §5 |
+| 9 | **Schema**: ThinkRank genera WebPage, Organization (nome, logo, descrizione) e BreadcrumbList. Non ci sono Service né FAQPage | Medio | Snippet Service + FAQPage (§5); per Organization vedi §5 |
 | 10 | **Non verificabile dall'export**: il testo dello slider in cima alla pagina (Revolution Slider "contatti-1") | Risulta contenere l'H1 "PROGETTAZIONE REVAMPING MACCHINARI INDUSTRIALI" (dallo screenshot): resta l'H1 della pagina | §3, §5 |
 
 Punti di forza da mantenere: testo scritto bene e coerente, sezione sicurezza già impostata correttamente ("non necessariamente" una nuova Marcatura CE), processo in 6 passi, FAQ già presenti, un solo obiettivo di conversione.
 
 ---
 
-## 2. Valori Yoast (Modifica pagina → Yoast SEO)
+## 2. Valori SEO (Modifica pagina → riquadro ThinkRank)
 
 | Campo | Valore |
 |---|---|
 | **Parola chiave principale** | `revamping macchinari industriali` |
-| **Titolo SEO** (56 car.) | `Revamping Macchinari Industriali \| Prosystem Engineering` |
+| **Titolo SEO** (56 car.) | Quello attuale (`Revamping macchinari industriali – Prosystem Engineering`, 55 car.) va bene: modificarlo solo se ThinkRank lo permette senza sforzo. In alternativa `Revamping Macchinari Industriali \| Prosystem Engineering` |
 | **Meta description** (149 car.) | `Revamping di macchinari e impianti industriali: riprogettazione meccanica, analisi dei rischi e Marcatura CE. Aggiorna la macchina senza sostituirla.` |
 | **Slug** | invariato: `/revamping-macchinari-industriali/` |
-| **Titolo social / descrizione social** | stessi valori; immagine 1200×630 con una foto reale di un intervento |
-| **Schema pagina** (Yoast → Schema) | Tipo di pagina: *Pagina web*. Il tipo Service viene dallo snippet dedicato |
+| **Titolo e descrizione social** | Stessi valori. **Immagine 1200×630 con una foto reale** (oggi è il logo) e **lingua `it_IT`** (oggi `en_US`, impostazione probabilmente valida per tutto il sito) |
+| **Schema** | Lasciare ThinkRank com'è (WebPage, Organization, BreadcrumbList) e aggiungere lo snippet Service + FAQPage (§5) |
 
 ---
 
@@ -96,7 +96,7 @@ Restano invariati i titoli H3/H4 dentro gli editor di testo (passi del processo,
 5. **FAQ**: 9 domande senza numerazione, titoli H3, testo da §6. Nuove: macchine senza Marcatura CE; cosa cambia con il Regolamento 2023/1230. Riscritta: la risposta sulla Marcatura CE.
 6. **Ancora mobile**: id `contatti-revamping` sulla sezione spaziatrice sopra i due blocchi contatti (sempre visibile) e i 4 CTA ora puntano lì. L'ID originale `richiedi-una-valutazione` resta dov'era, così eventuali stili collegati non si rompono.
 7. **Contatti duplicati**: i titoli della copia mobile diventano testo normale, per non avere due volte gli stessi H1/H2.
-8. **Testi alternativi**: icone dei passi "Fase 1…6"; immagini principali con alt descrittivo del tema della sezione (scritti senza vedere le immagini: controllare che corrispondano).
+8. **Testi alternativi** nel JSON: non sopravvivono all'import di Elementor (che ricrea le immagini e perde il campo). Vanno impostati in Libreria media (§5).
 
 Il file **non contiene segnaposto**: tutto quello che c'è è pubblicabile. Autore, data e caso reale mancano perché servono dati reali (§5).
 
@@ -106,12 +106,15 @@ Il file **non contiene segnaposto**: tutto quello che c'è è pubblicabile. Auto
 
 | Priorità | Attività | Perché |
 |---|---|---|
-| 1 | **Yoast**: inserire titolo, meta e parola chiave (§2) | Non si importano con Elementor |
+| 1 | **ThinkRank**: meta description (§2), immagine social e lingua | Non si importano con Elementor |
+| 1 | **Pulsante dello slider**: in Slider Revolution → "Landing REVAMPING" → layer del pulsante → azione *Scroll to ID*, sostituire `richiedi-una-valutazione` con `contatti-revamping` | Sul sorgente il pulsante ha ancora l'ID vecchio (nascosto su mobile): su telefono probabilmente non scorre |
+| 1 | **Provare il form da telefono**: la pagina contiene due volte lo stesso form (`id="wpforms-6971"`), e da telefono è visibile la seconda copia. Inviare una richiesta di prova | ID duplicati: la validazione e l'invio potrebbero non funzionare sulla copia mobile |
+| 1 | **Alt in Libreria media** sulle nuove immagini (`…-1.png`): icone "Fase 1…6", immagini principali con alt descrittivo | Vedi §1, punto 6 |
 | 1 | **Slider in cima**: aprire Revolution Slider → "Landing REVAMPING" e verificare che il layer del titolo sia un H1 (lo è) e che compaia nel sorgente della pagina pubblicata (`Ctrl+U`, cerca `<h1`). Se manca, lo slider lo disegna via JavaScript: in quel caso l'H1 va rimesso nel corpo | Evita un doppio H1; il testo dello slider non è nell'export |
 | 1 | **Provare i CTA da telefono** dopo la pubblicazione | Verifica del punto 3 del §1 |
 | 2 | **Autore e data**: aggiungere sotto le FAQ un blocco "Contenuto a cura di [nome], ingegnere iscritto all'Ordine [provincia, n.]. Ultimo aggiornamento: [data]" | E-E-A-T: chi firma un contenuto normativo |
 | 2 | **Un caso reale** (anche anonimo) in una sezione dedicata: settore, macchina, problema, intervento, esito normativo, risultati misurabili | È quello che più aumenta le citazioni delle AI; oggi la pagina non ha nessun dato reale |
-| 2 | **Schema**: incollare `schema/revamping-macchinari-industriali.html` e `schema/organization.html` (guida `04-…`), poi controllare con il Rich Results Test | Service e FAQPage non sono generati da nessun altro |
+| 2 | **Schema**: incollare `schema/revamping-macchinari-industriali.html` (Service + FAQPage, ThinkRank non li genera) e controllare con il Rich Results Test. **Non** incollare `schema/organization.html` finché non si è deciso dove tenere i dati aziendali: ThinkRank emette già un'Organization con lo stesso `@id`, e due blocchi con dati diversi si contraddicono | Il provider del Service punta già all'Organization di ThinkRank |
 | 2 | **Plugin SEO doppi**: guardare il sorgente della pagina (`Ctrl+U`) e cercare `application/ld+json` e `<title`: devono esserci un solo `<title>`, una sola meta description, e nessun FAQPage duplicato | Il widget Accordion non genera schema, ma un secondo plugin potrebbe |
 | 3 | **Link verso la pagina**: dalla landing adeguamento, dalla pagina Marcatura CE, dal menu Servizi e dalla home | Oggi la pagina ha zero link in entrata verificabili da qui |
 | 3 | **Link a Marcatura CE**: nel testo della sezione sicurezza, agganciare "Marcatura CE" alla pagina corretta (esistono `/marcatura-ce/` e `/marcatura-ce-2/`: da chiarire quale tenere) | Non l'ho inserito per non linkare l'URL sbagliato |
@@ -165,8 +168,8 @@ Dal 20 gennaio 2027 il Regolamento (UE) 2023/1230 sostituisce la Direttiva Macch
 3. Controllare l'anteprima su desktop, tablet e telefono: aspetto dei titoli, nuova tabella, CTA che scorrono al form.
 4. Se tutto è a posto, due strade equivalenti:
    - copiare il contenuto della bozza nella pagina 6969 (o incollare le sezioni), oppure
-   - pubblicare la bozza con slug `/revamping-macchinari-industriali/` **dopo aver cambiato lo slug della pagina vecchia** (e copiando le impostazioni Yoast). La prima è più sicura: non cambia l'URL né la cronologia.
-5. Inserire i valori Yoast (§2), controllare lo slider (§5), pubblicare e chiedere l'indicizzazione in Search Console.
+   - pubblicare la bozza con slug `/revamping-macchinari-industriali/` **dopo aver cambiato lo slug della pagina vecchia** (e copiando le impostazioni ThinkRank). La prima è più sicura: non cambia l'URL né la cronologia.
+5. Inserire i valori ThinkRank (§2), sistemare il pulsante dello slider (§5), pubblicare e chiedere l'indicizzazione in Search Console.
 
 Il template contiene lo shortcode dello slider e i widget WPForms/EAEL già usati dalla pagina: l'import funziona sullo stesso sito. Non l'ho potuto provare su un WordPress: se l'import desse errore, la pagina live non subisce alcun effetto e mi si può passare il messaggio.
 
@@ -187,11 +190,12 @@ Il template contiene lo shortcode dello slider e i widget WPForms/EAEL già usat
 
 ## 9. Checklist pre-pubblicazione
 
-- [ ] Yoast: titolo, meta description e parola chiave aggiornati
+- [ ] ThinkRank: meta description, immagine social e lingua aggiornati
 - [ ] Un solo `<h1>` nel sorgente (`Ctrl+U`): quello dello slider
 - [ ] I 4 CTA scorrono al form su desktop **e** su telefono
 - [ ] Tabella leggibile su telefono (scorre in orizzontale)
-- [ ] Testi alternativi controllati sulle immagini reali
+- [ ] Testi alternativi impostati in Libreria media e controllati sulle immagini reali
+- [ ] Form provato da telefono
 - [ ] Definizione di modifica sostanziale confrontata con EUR-Lex
 - [ ] Schema Service + FAQPage + Organization incollati e validati
 - [ ] Autore, data e caso reale aggiunti

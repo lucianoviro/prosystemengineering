@@ -12,7 +12,7 @@ Sito: WordPress + Elementor.
 | File | A cosa serve |
 |---|---|
 | [`01-strategia-seo-geo.md`](01-strategia-seo-geo.md) | Problemi rilevati, ruolo di ogni pagina, redirect, strategia GEO, misurazione, checklist di audit, priorità |
-| [`02-landing-revamping-macchinari-industriali.md`](02-landing-revamping-macchinari-industriali.md) | **Landing revamping, analizzata sulla pagina reale**: rilievi, valori Yoast, gerarchia dei titoli prima/dopo, testi nuovi, FAQ, cosa fare a mano, come importare |
+| [`02-landing-revamping-macchinari-industriali.md`](02-landing-revamping-macchinari-industriali.md) | **Landing revamping, analizzata sulla pagina reale**: rilievi, valori SEO (ThinkRank), gerarchia dei titoli prima/dopo, testi nuovi, FAQ, cosa fare a mano, come importare |
 | [`03-landing-adeguamento-macchine-dlgs-81-08.md`](03-landing-adeguamento-macchine-dlgs-81-08.md) | Landing adeguamento: **bozza generica** da rifare sull'export reale (prossimo passo) |
 | [`04-implementazione-wordpress-elementor.md`](04-implementazione-wordpress-elementor.md) | Guida passo passo per Elementor, Yoast/Rank Math, schema, redirect, prestazioni |
 | `elementor/revamping-ottimizzata.json` | **Template Elementor importabile** della landing revamping (pagina reale + modifiche) |
@@ -25,7 +25,7 @@ Sito: WordPress + Elementor.
 
 ## Da dove iniziare
 
-**Landing revamping** (pronta): seguire `02-landing-revamping-macchinari-industriali.md` §2 (Yoast), §7 (import del template) e §5 (attività a mano).
+**Landing revamping** (pronta): seguire `02-landing-revamping-macchinari-industriali.md` §2 (ThinkRank), §7 (import del template) e §5 (attività a mano).
 
 **Landing adeguamento**: da rifare partendo dall'export, con lo stesso metodo.
 
@@ -55,6 +55,6 @@ Lo script scrive gli snippet in `schema/` e segnala i segnaposto ancora presenti
 
 ## Limiti di questa analisi
 
-Il sito non è raggiungibile dall'ambiente di lavoro (dominio bloccato dalla policy di rete): l'analisi si basa sull'export XML di WordPress del 29/09/2026, che contiene contenuto, struttura Elementor e meta Yoast **solo delle due landing**. Non sono verificabili da qui: testo dello slider, `<head>` reale (schema, plugin SEO), indicizzazione, prestazioni. La landing revamping è analizzata sui dati reali; la landing adeguamento (file `03-…`, `elementor/adeguamento-blocchi.html`) è ancora una bozza generica da rifare sull'export. Con l'accesso al dominio (o il sorgente HTML delle due pagine) si può fare l'analisi delle differenze rispetto ai testi attuali.
+Il sito non è raggiungibile dall'ambiente di lavoro (dominio bloccato dalla policy di rete): l'analisi si basa sull'export XML di WordPress del 29/09/2026, che contiene contenuto, struttura Elementor e meta **solo delle due landing**; per la landing revamping anche sul sorgente HTML pubblicato. Non sono verificabili da qui: testo dello slider, `<head>` reale (schema, plugin SEO), indicizzazione, prestazioni. La landing revamping è analizzata sui dati reali; la landing adeguamento (file `03-…`, `elementor/adeguamento-blocchi.html`) è ancora una bozza generica da rifare sull'export. Con l'accesso al dominio (o il sorgente HTML delle due pagine) si può fare l'analisi delle differenze rispetto ai testi attuali.
 
 Normativa verificata alla data del 24/09/2026.

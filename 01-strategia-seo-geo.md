@@ -37,7 +37,7 @@ La landing revamping è stata riscritta sui contenuti reali (`02-…`). La landi
 | 7 | Versione inglese: la pagina è intitolata "**CE Making**" (refuso di *CE Marking*) e la home EN ha slug `/home-eng-nuova/` | Medio sul mercato estero | Correggere il titolo; valutare le versioni EN delle due landing con `hreflang` |
 | 8 | Refuso nello slug `/consulenza-quaita-ambiente/` | Basso | Correggere in `/consulenza-qualita-ambiente/` con 301 |
 | 9 | Le due landing sono **molto recenti** (la landing revamping è stata creata il 15/09/2026): normale che non comparissero nelle ricerche di prova | Informativo | Controllo URL in Search Console: indicizzata? canonical corretto? |
-| 10 | **Entrambe le landing hanno titolo SEO, meta description e parola chiave della home** ("Prosystem Engineering \| Consulenza e progettazione", kw "consulenza"): sono duplicati l'una dell'altra e di un'altra pagina (ID 4734) | **Alto**: titoli e descrizioni duplicati, nessuna ottimizzazione per le keyword target | Nuovi valori per la revamping in `02-…` §2; per l'adeguamento in `03-…` |
+| 10 | **Meta description auto-generata**: sulla landing revamping il plugin SEO (ThinkRank) ricava la descrizione dall'inizio del testo (maiuscolo, troncata), con `og:image` = logo e `og:locale` = `en_US`. Molto probabilmente vale anche per la landing adeguamento e per le altre pagine | **Alto**: è il testo dei risultati di ricerca | Descrizioni scritte a mano; impostazioni ThinkRank (`02-…` §2) |
 
 ---
 
