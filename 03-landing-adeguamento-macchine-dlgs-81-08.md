@@ -1,290 +1,186 @@
-# Landing 2 — Adeguamento macchine, marcatura CE e D.Lgs. 81/08
+# Landing 2 — Adeguamento macchine, Marcatura CE e D.Lgs. 81/08
 
-URL: `https://prosystemengineering.com/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/`
+URL: `https://prosystemengineering.com/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/` (ID pagina 7176)
 
-> Le parti tra `[[doppie quadre]]` sono dati che solo Prosystem conosce: completarle o eliminarle **prima** della pubblicazione.
+> **Versione 2**, basata sull'export WordPress del 29/09/2026 (contenuto e struttura Elementor reali). Sostituisce la bozza generica.
+> Stesso metodo della landing revamping (`02-…`): un template Elementor importabile, generato dall'export, che non tocca la pagina live.
 
----
-
-## 1. Dati SEO
-
-| Campo | Valore proposto | Note |
+| Cosa | Come | File |
 |---|---|---|
-| **Slug** | `/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/` | Lungo ma descrittivo. **Non cambiarlo** se la pagina è già indicizzata o ha link |
-| **Keyword primaria** | adeguamento macchine D.Lgs 81/08 | |
-| **Keyword secondarie** | messa a norma macchinari · adeguamento macchine non marcate CE · allegato V D.Lgs 81/08 · macchine senza marcatura CE · verifica conformità macchine · marcatura CE macchine · messa in sicurezza macchinari · vendita macchine usate non CE | |
-| **Domande (GEO / AI)** | Cosa fare con una macchina senza marcatura CE? · Chi deve adeguare le macchine? · Una macchina marcata CE è sicura per sempre? · Posso vendere una macchina usata non CE? · Quali sanzioni per macchine non a norma? | Coperte da H2 e FAQ |
-| **Intento** | Commerciale-informativo (datore di lavoro, RSPP, ufficio tecnico, acquisti) | |
-| **Title tag** (59 car.) | `Adeguamento Macchine D.Lgs 81/08 e Marcatura CE \| Prosystem` | |
-| **Meta description** (155 car.) | `Messa a norma di macchine con e senza marcatura CE: verifica Allegato V D.Lgs 81/08, valutazione dei rischi, interventi e documentazione. Da Pinerolo (TO).` | |
-| **H1** | Adeguamento macchine al D.Lgs. 81/08 e marcatura CE | **Uno solo** in pagina |
-| **OG title** | Adeguamento macchine al D.Lgs. 81/08: macchine con e senza marcatura CE | |
-| **OG description** | Verifichiamo le tue macchine, progettiamo la messa a norma e rilasciamo la documentazione che tutela il datore di lavoro. | |
+| Meta description, titolo SEO, parola chiave, tipo di schema | A mano in ThinkRank (§2) | — |
+| Titoli, nuovi blocchi, FAQ, link, contatti, schema, autore | Import del template Elementor (§6) | `elementor/adeguamento-ottimizzata.json` |
+| Testi alternativi | A mano in Libreria media (§5) | — |
 
 ---
 
-## 2. Struttura della pagina (sezione → widget Elementor)
+## 1. Cosa emerge dall'export
 
-| # | Sezione | Heading | Widget Elementor |
+La pagina è un clone della landing revamping: i difetti strutturali sono gli stessi, il testo invece è buono e va mantenuto.
+
+| # | Rilievo | Impatto | Correzione |
 |---|---|---|---|
-| 1 | Hero | **H1** | Heading (H1) + Text Editor + 2 Button |
-| 2 | Trust strip | — | Icon List |
-| 3 | "In sintesi" | — | HTML → `elementor/adeguamento-blocchi.html` blocco A |
-| 4 | Cosa significa adeguare una macchina | H2 | Heading + Text Editor |
-| 5 | Con o senza marcatura CE: quali norme | H2 | Heading + HTML (tabella, blocco B) |
-| 6 | Macchine non CE e Allegato V | H2 | Heading + Text Editor |
-| 7 | Le macchine CE vanno adeguate? | H2 | Heading + Text Editor |
-| 8 | Il metodo in 6 fasi | H2 | Heading + HTML (blocco C) |
-| 9 | Documenti che ottieni | H2 | Heading + Icon List |
-| 10 | Norme tecniche di riferimento | H2 | Heading + HTML (tabella, blocco D) |
-| 11 | Responsabilità e sanzioni | H2 | Heading + Text Editor |
-| 12 | Macchine usate | H2 | Heading + Text Editor |
-| 13 | Regolamento Macchine 2027 | H2 | Heading + Text Editor |
-| 14 | Perché Prosystem | H2 | Heading + Icon List |
-| 15 | FAQ | H2 + H3 | Accordion (Title HTML tag = H3) |
-| 16 | CTA + form | H2 | Heading + Form (id `contatti`) |
-| 17 | Autore e fonti | — | HTML (blocco E) |
+| 1 | **13 titoli H1** nel corpo (uno per sezione, più i due della sezione contatti duplicata); i sottotitoli sono H2 e i blocchi di testo interni H3/H4 | **Medio-alto**: nessuna gerarchia leggibile | Un solo H1 (quello dello slider, da verificare), sezioni H2 (§3) |
+| 2 | **Nessuna descrizione SEO**: in ThinkRank non risulta impostato nessun campo per questa pagina; la meta description viene ricavata a caso dall'inizio del testo, come sulla revamping prima della correzione. Il titolo di pagina (`Adeguamento macchine, marcatura CE e D.Lgs. 81/08 – Prosystem Engineering`, 72 caratteri) viene troncato nei risultati | **Alto** | §2 |
+| 3 | **CTA su mobile**: i 5 pulsanti puntano a `#richiedi-una-valutazione`, sezione nascosta su mobile (copia separata senza ID) | **Alto sulle conversioni** | Copia mobile eliminata, sezione unica (§4) |
+| 4 | **Sezione contatti duplicata**: due volte titolo, indirizzo, mappa e lo stesso form (WPForms 6971, ID identici) | Medio | Come sopra |
+| 5 | **Nessun link interno**: nemmeno verso la landing revamping | Medio | Link nel testo e nelle FAQ (§4) |
+| 6 | **Alt**: tutte le immagini con `alt` vuoto; le icone dei passi hanno come alt il nome del file | Medio-basso | §5 |
+| 7 | **FAQ**: 7 domande numerate, senza heading; la risposta sulla modifica non definisce la modifica sostanziale; mancano le domande più cercate (macchine usate, controlli periodici, sanzioni, Regolamento 2027) | Medio (GEO) | 12 domande (§7) |
+| 8 | **Riferimenti normativi generici**: Allegato V citato, ma senza data, senza art. 70-72, senza il Regolamento 2023/1230 | Medio (GEO) | Tabella e paragrafi (§4) |
+| 9 | Nessun schema Service/FAQPage, nessun autore né data | Medio | Nel template (§4) |
+| 10 | **Non verificabile dall'export**: testo dello slider ("Landing Adeguamenti Marcatura CE") | Se non contiene un H1, la pagina resta senza H1 | §5 |
+
+Punti di forza da mantenere: distinzione chiara tra Marcatura CE e D.Lgs. 81/08, elenco dei fattori di verifica, sezioni audit del parco macchine e adeguamento "chiavi in mano", tono prudente ("la conclusione non può essere automatica").
 
 ---
 
-## 3. Testi ottimizzati (pronti da incollare)
+## 2. Valori SEO (Modifica pagina → riquadro ThinkRank)
 
-### HERO
-
-**[H1]** Adeguamento macchine al D.Lgs. 81/08 e marcatura CE
-
-**[Paragrafo]**
-Verifichiamo le macchine e le attrezzature della tua azienda, con o senza marcatura CE, progettiamo gli interventi di messa a norma e rilasciamo la documentazione tecnica che dimostra la conformità in caso di ispezione.
-
-**[Bottone 1]** Richiedi una verifica delle tue macchine → `#contatti`
-**[Bottone 2]** Chiama 0121 39 86 28 → `tel:+390121398628`
-
-**[Trust strip]**
-- Dal 1996 consulenza su sicurezza macchine e marcatura CE
-- [[Ingegneri iscritti all'Ordine — verificare]]
-- Sede a Pinerolo (TO), interventi in [[Piemonte e Nord Italia — verificare]]
-
-### BOX "IN SINTESI" (blocco HTML A)
-
-- Il datore di lavoro deve mettere a disposizione dei lavoratori attrezzature conformi e mantenerle sicure nel tempo (**artt. 70 e 71 D.Lgs. 81/08**).
-- Le macchine immesse sul mercato in Italia dal **21 settembre 1996** devono avere marcatura CE, dichiarazione di conformità e istruzioni. Vanno comunque verificati usura, manomissioni e modifiche.
-- Le macchine **prive di marcatura CE** perché costruite prima devono rispettare i requisiti generali di sicurezza dell'**Allegato V** del D.Lgs. 81/08.
-- Chi **vende, noleggia o concede in uso** una macchina non marcata CE deve attestarne la conformità all'Allegato V (**art. 72**).
-- Se l'adeguamento modifica la macchina in modo sostanziale, serve una **nuova marcatura CE**.
-
----
-
-### [H2] Cosa significa adeguare una macchina alle norme di sicurezza?
-
-Adeguare una macchina significa verificarne la conformità ai requisiti di sicurezza applicabili e, dove serve, intervenire con ripari, dispositivi di protezione, modifiche ai circuiti di comando e di sicurezza, segnaletica e istruzioni, fino a documentare che la macchina può essere usata in sicurezza. Le regole di riferimento cambiano a seconda che la macchina sia marcata CE oppure no.
-
-L'obbligo ricade sul datore di lavoro, che risponde della sicurezza di tutte le attrezzature messe a disposizione dei lavoratori: macchine di produzione, impianti, utensili, apparecchi di sollevamento.
-
-### [H2] Macchina con o senza marcatura CE: quali norme si applicano?
-
-*(Tabella — blocco HTML B)*
-
-| Situazione | Riferimento normativo | Cosa serve |
-|---|---|---|
-| Macchina marcata CE (immessa sul mercato dal 21/09/1996) | Direttiva Macchine (oggi 2006/42/CE, recepita con D.Lgs. 17/2010); dal 20/01/2027 Regolamento (UE) 2023/1230; artt. 70 c.1 e 71 D.Lgs. 81/08 | Dichiarazione di conformità, istruzioni in italiano, verifica che la macchina sia rimasta conforme (manutenzione, ripari, dispositivi di sicurezza) |
-| Macchina senza marcatura CE, antecedente all'obbligo | Art. 70 c.2 e Allegato V D.Lgs. 81/08 | Verifica dei requisiti dell'Allegato V, interventi di adeguamento, relazione tecnica di conformità |
-| Macchina senza marcatura CE immessa sul mercato dopo il 21/09/1996 | Direttiva / Regolamento Macchine | Non si regolarizza con il solo Allegato V: va valutato con un tecnico il percorso di messa in conformità e marcatura CE |
-| Macchina costruita internamente per uso proprio | Direttiva / Regolamento Macchine | Chi la costruisce è fabbricante: valutazione dei rischi, fascicolo tecnico, dichiarazione e marcatura CE |
-| Macchina modificata in modo sostanziale | Direttiva 2006/42/CE; dal 20/01/2027 Reg. (UE) 2023/1230, artt. 3 e 18 | Nuova valutazione dei rischi, fascicolo tecnico, dichiarazione e marcatura CE |
-| Insieme di macchine (linea) | Direttiva 2006/42/CE; Reg. (UE) 2023/1230 | Valutazione dei rischi dell'insieme e marcatura CE dell'insieme |
-| Macchina usata venduta, noleggiata o concessa in uso | Art. 72 D.Lgs. 81/08 | Per le macchine non CE: attestazione di conformità all'Allegato V al momento della consegna |
-
-### [H2] Adeguamento delle macchine non marcate CE: i requisiti dell'Allegato V
-
-Le macchine costruite o messe a disposizione dei lavoratori prima delle direttive di prodotto, e quindi prive di marcatura CE, possono restare in servizio solo se rispettano i requisiti generali di sicurezza dell'Allegato V del D.Lgs. 81/08. La verifica va fatta macchina per macchina e documentata.
-
-I requisiti dell'Allegato V riguardano, tra gli altri:
-
-- sistemi e dispositivi di comando, di avviamento e di arresto, compreso l'arresto di emergenza;
-- protezione dagli elementi mobili, con ripari fissi o mobili e dispositivi di interblocco;
-- rischi di scoppio o rottura di elementi e di proiezione di oggetti;
-- emissioni di gas, vapori, liquidi e polveri;
-- rischi elettrici, di incendio e di esplosione;
-- illuminazione delle zone di lavoro e temperature estreme;
-- segnalazioni, avvertenze e dispositivi di allarme;
-- condizioni sicure per manutenzione, riparazione e regolazione;
-- prescrizioni supplementari per attrezzature specifiche, come apparecchi di sollevamento e attrezzature mobili.
-
-Per ogni macchina compiliamo una check-list dei requisiti, individuiamo le non conformità e proponiamo gli interventi in ordine di priorità, tenendo conto anche delle disposizioni sull'uso delle attrezzature dell'Allegato VI.
-
-### [H2] Le macchine marcate CE vanno adeguate?
-
-La marcatura CE attesta che la macchina era conforme quando è stata immessa sul mercato, non che lo sia per sempre. Il datore di lavoro deve mantenerla in condizioni di sicurezza per tutta la vita utile, con manutenzione, controlli e interventi correttivi (art. 71 D.Lgs. 81/08).
-
-Le situazioni che incontriamo più spesso:
-
-- ripari rimossi o dispositivi di interblocco esclusi;
-- modifiche e integrazioni non documentate;
-- istruzioni per l'uso mancanti o non in lingua italiana;
-- macchine collegate in linea con altre (insieme di macchine) senza una valutazione complessiva dei rischi;
-- cambi di layout o di utilizzo rispetto a quanto previsto dal fabbricante;
-- carenze di progetto nonostante la marcatura CE.
-
-### [H2] Come si svolge l'adeguamento delle macchine: il nostro metodo
-
-*(Elenco numerato — blocco HTML C)*
-
-1. **Censimento del parco macchine**: elenco di macchine e attrezzature con anno, marcatura CE e documentazione disponibile.
-2. **Sopralluogo e verifica**: check-list sui requisiti dell'Allegato V per le macchine non CE e sui requisiti essenziali di sicurezza per quelle marcate CE.
-3. **Valutazione dei rischi** di ogni macchina secondo UNI EN ISO 12100.
-4. **Relazione tecnica con piano di interventi**: non conformità, soluzioni proposte, priorità e stima dei costi.
-5. **Progettazione e supporto alla realizzazione**: ripari, circuiti di sicurezza (UNI EN ISO 13849-1), equipaggiamento elettrico (CEI EN 60204-1), in collaborazione con i fornitori dell'azienda [[o con i nostri partner — verificare]].
-6. **Verifica finale e documentazione**: relazione di conformità, aggiornamento di istruzioni e DVR, formazione e addestramento degli operatori (art. 73 D.Lgs. 81/08).
-
-### [H2] Documenti che ottieni
-
-- Relazione tecnica di verifica della conformità per ogni macchina
-- Valutazione dei rischi della macchina
-- Piano degli interventi di adeguamento con priorità e stima dei costi
-- Relazione tecnica a supporto dell'attestazione di conformità all'Allegato V (anche ai fini dell'art. 72)
-- Fascicolo tecnico, dichiarazione di conformità e marcatura CE, in caso di modifica sostanziale o di insieme di macchine
-- Istruzioni per l'uso e la manutenzione aggiornate
-
-Link: *Per le macchine nuove o costruite in proprio vedi il servizio di [marcatura CE](https://prosystemengineering.com/marcatura-ce/).* [[verificare URL canonico]]
-
-### [H2] Norme tecniche di riferimento
-
-*(Tabella — blocco HTML D)*
-
-| Norma | Ambito |
+| Campo | Valore |
 |---|---|
-| UNI EN ISO 12100 | Principi generali di progettazione, valutazione e riduzione del rischio |
-| UNI EN ISO 13849-1 e 13849-2 | Parti dei sistemi di comando legate alla sicurezza (Performance Level) e loro validazione |
-| CEI EN 62061 | Sicurezza funzionale dei sistemi di comando (SIL) |
-| CEI EN 60204-1 | Equipaggiamento elettrico delle macchine |
-| UNI EN ISO 14120 | Ripari fissi e mobili |
-| UNI EN ISO 14119 | Dispositivi di interblocco associati ai ripari |
-| UNI EN ISO 13857 | Distanze di sicurezza dalle zone pericolose |
-| UNI EN ISO 13855 | Posizionamento dei dispositivi di protezione in base alla velocità di avvicinamento |
-| UNI EN ISO 13850 | Funzione di arresto di emergenza |
+| **Parola chiave principale** | `adeguamento macchine D.Lgs 81/08` |
+| **Titolo SEO** (59 car.) | `Adeguamento Macchine D.Lgs. 81/08 e Marcatura CE \| Prosystem` |
+| **Meta description** (142 car.) | `Messa a norma di macchine con e senza Marcatura CE: verifica Allegato V D.Lgs. 81/08, analisi dei rischi, interventi e documentazione tecnica.` |
+| **Tipo di schema** | **WebPage** (non "Article"): Service e FAQPage sono già nel template |
+| **Immagine social** | Foto reale 1200×630 |
+| **Slug** | invariato |
 
-A queste si aggiungono le norme di tipo C specifiche per singole famiglie di macchine (ad esempio presse, macchine utensili, robot industriali).
+---
 
-### [H2] Chi è responsabile dell'adeguamento e cosa si rischia?
+## 3. Gerarchia dei titoli: prima e dopo
 
-La responsabilità dell'adeguamento è del datore di lavoro, insieme a dirigenti e preposti per quanto di competenza. Il D.Lgs. 81/08 prevede sanzioni penali, con arresto o ammenda, per chi mette a disposizione dei lavoratori attrezzature non conformi agli articoli 70 e 71 (art. 87). In caso di infortunio si aggiungono la responsabilità penale per lesioni o omicidio colposo e, per le lesioni gravi o gravissime, la responsabilità amministrativa dell'azienda ai sensi del D.Lgs. 231/2001 (art. 25-septies).
+<!-- OUTLINE:START -->
+| Titolo | Prima | Dopo |
+|---|---|---|
+| LA MARCATURA CE NON È L’UNICO ASPETTO DA VERIFICARE | H1 | **H2** |
+| QUANDO È NECESSARIO VERIFICARE LA CONFORMITÀ DI UNA MACCHINA | H1 | **H2** |
+| ADEGUAMENTO DELLE MACCHINE AL D.LGS. 81/08 | H1 | **H2** |
+| Verifica dei requisiti di sicurezza delle attrezzature di lavoro | H2 | **H3** |
+| VERIFICA DELLA MARCATURA CE E DELLA DOCUMENTAZIONE | H1 | **H2** |
+| COME AFFRONTIAMO L’ADEGUAMENTO DI UNA MACCHINA | H1 | **H2** |
+| ADEGUAMENTO “CHIAVI IN MANO” | H1 | **H2** |
+| Dall’individuazione del rischio alla verifica dell’intervento | H2 | **testo** |
+| MACCHINE CON E SENZA MARCATURA CE | H1 | **H2** |
+| Ogni macchina richiede un inquadramento specifico | H2 | **testo** |
+| AUDIT DI SICUREZZA DEL PARCO MACCHINE | H1 | **H2** |
+| Conosci lo stato di conformità del tuo stabilimento | H2 | **testo** |
+| ESPERIENZA NELLA SICUREZZA DELLE MACCHINE INDUSTRIALI | H1 | **H2** |
+| PERCHÉ SCEGLIERE PROSYSTEM ENGINEERING | H1 | **H2** |
+| FAQ → **DOMANDE FREQUENTI SULL’ADEGUAMENTO DELLE MACCHINE** | H1 | **H2** |
+| DEVI VERIFICARE O ADEGUARE UNA MACCHINA? | H1 | **H2** |
+| Contattaci, partiremo da un’analisi tecnica delle condizioni reali | H2 | **testo** |
+| QUALI NORME SI APPLICANO ALLA TUA MACCHINA *(nuova sezione)* | — | **H2** |
+| Domande delle FAQ (12, senza numerazione) | testo semplice | **H3** |
 
-Una relazione tecnica aggiornata, con gli interventi eseguiti, è il documento che dimostra la diligenza del datore di lavoro davanti all'organo di vigilanza.
+**Riepilogo**: nel corpo, prima 13 H1 e 8 H2. Dopo: **0 H1 nel corpo** (l'H1 è quello dello slider), 15 H2, sottotitoli e slogan come testo semplice, FAQ in H3. Le righe della sezione contatti presenti due volte erano la stessa sezione in versione desktop e mobile: ora è una sola.
 
-### [H2] Vendere, acquistare o noleggiare una macchina usata: cosa verificare
+Restano invariati i titoli dentro i blocchi di testo (passi del processo H4, blocchi "Perché scegliere" H3, ecc.), perché il loro aspetto dipende dal tema. In particolare restano due H2 interni: la citazione *"Prosystem Engineering individua le criticità…"* (una frase intera, in un riquadro di citazione) e *"Il servizio può comprendere"* (bianco su fondo blu). Modificarli cambierebbe l'aspetto; sono difetti minori.
+<!-- OUTLINE:END -->
 
-Chi vende, noleggia o concede in uso una macchina non marcata CE deve attestare, sotto la propria responsabilità, che al momento della consegna è conforme ai requisiti dell'Allegato V del D.Lgs. 81/08 (art. 72). Per una macchina usata marcata CE vanno consegnate anche la dichiarazione di conformità e le istruzioni originali.
+---
 
-Prima di acquistare una macchina usata conviene far verificare documentazione, stato dei dispositivi di sicurezza ed eventuali modifiche: un intervento di adeguamento scoperto dopo l'acquisto può costare più della macchina. [[Se offerto: "Eseguiamo verifiche pre-acquisto su macchine usate."]] Se la macchina va anche ammodernata, vedi il nostro servizio di [revamping dei macchinari industriali](https://prosystemengineering.com/revamping-macchinari-industriali/).
+## 4. Cosa contiene il template Elementor
 
-### [H2] Dal 20 gennaio 2027 il Regolamento Macchine: cosa cambia
+`elementor/adeguamento-ottimizzata.json` è la pagina attuale con queste modifiche:
 
-Il Regolamento (UE) 2023/1230 sostituisce la Direttiva 2006/42/CE dal 20 gennaio 2027 e si applica direttamente in tutti gli Stati membri. Le novità principali:
+1. **Titoli** come al §3. L'H1 resta quello dello slider.
+2. **Definizione in apertura** (prima del testo esistente): che cos'è l'adeguamento di una macchina e a chi spetta (artt. 70 e 71 D.Lgs. 81/08).
+3. **Precisazione sull'Allegato V**: vale per le macchine antecedenti all'obbligo di Marcatura CE (in Italia dal 21 settembre 1996); per quelle successive e prive di marcatura non basta.
+4. **Nuova sezione "Quali norme si applicano alla tua macchina"**, dopo "Macchine con e senza Marcatura CE": tabella con sette casi (marcata CE, non marcata antecedente, non marcata successiva, costruita in proprio, modificata, insieme di macchine, usata venduta o noleggiata), il Regolamento 2023/1230 e le fonti (EUR-Lex, Normattiva).
+5. **Link alla landing revamping**: nel riquadro "Macchine modificate o integrate", sotto la tabella e nelle FAQ. Link alla pagina sulla verifica degli impianti di sollevamento nella FAQ sui controlli.
+6. **FAQ**: 12 domande, titoli H3, senza numerazione (§7). Le 7 originali sono mantenute (la 4 è riscritta, le 1 e 2 hanno un riferimento in più).
+7. **Contatti**: eliminata la copia mobile; la sezione con ID `richiedi-una-valutazione` è ora visibile ovunque, quindi tutti i CTA e il pulsante dello slider funzionano su telefono. Un solo form, una sola mappa.
+8. **Autore e data** sotto le FAQ (stesso formato della landing revamping) e **schema Service + FAQPage** come widget HTML.
 
-- definizione esplicita di **modifica sostanziale**, anche per le modifiche fatte con mezzi digitali (art. 3, punto 16) e obblighi da fabbricante per chi la esegue (art. 18);
-- istruzioni fornibili in formato digitale, con copia cartacea gratuita su richiesta dell'acquirente;
-- nuovi requisiti su protezione contro la manomissione e la corruzione dei sistemi di comando, anche informatica, e sui sistemi con comportamento autonomo.
+Il file non contiene segnaposto. Non contiene gli alt (l'import li perde: §5).
 
-Per chi utilizza le macchine restano validi gli obblighi del D.Lgs. 81/08; cambia il modo di valutare le modifiche fatte dopo il 2027. Approfondisci nella pagina sul [revamping dei macchinari](https://prosystemengineering.com/revamping-macchinari-industriali/).
+---
 
-### [H2] Perché scegliere Prosystem Engineering
+## 5. Da fare a mano
 
-- **Esperienza dal 1996** in marcatura CE, sicurezza delle macchine, [verifica degli impianti di sollevamento](https://prosystemengineering.com/verifica-impianti-di-sollevamento/) e [formazione](https://prosystemengineering.com/formazione/).
-- **Soluzioni proporzionate** al rischio e al budget, con priorità chiare.
-- **Un solo interlocutore** per verifica, progetto, documentazione e formazione.
-- **Vicini al cliente**: sede a Pinerolo (TO), interventi in [[Piemonte e Nord Italia]].
+| Priorità | Attività | Perché |
+|---|---|---|
+| 1 | **ThinkRank**: titolo, meta description, tipo di schema WebPage, immagine social (§2) | Non si importano con Elementor |
+| 1 | **Slider "Landing Adeguamenti Marcatura CE"** (Slider Revolution): verificare che il titolo grande sia un layer H1, e che compaia nel sorgente pubblicato (`view-source:`, cerca `<h1`). Se manca, dimmelo: il titolo "La Marcatura CE non è l'unico aspetto da verificare" va rimesso come H1 nel corpo | L'export non contiene lo slider |
+| 1 | **Alt in Libreria media** sulle immagini nuove (`…-1`): icone dei passi "Fase 1…8"; immagini principali con testo descrittivo (verificare sulle immagini reali: le tre sono `pexels-sergey-sergeev…`, `ADEGUAMENTO-CHIAVI-IN-MANO…`, `AUDIT-DI-SICUREZZA-DEL-PARCO-MACCHINE…`) | L'import perde gli alt |
+| 1 | **Provare il form da telefono** | La copia mobile è stata eliminata |
+| 2 | **Confronto con i testi ufficiali**: l'ingegnere verifica sui testi di legge le affermazioni su artt. 70, 71, 72, 87 D.Lgs. 81/08, sul 21 settembre 1996 e sulla definizione di modifica sostanziale (art. 3, punto 16, Reg. 2023/1230). Non ho potuto consultare EUR-Lex né Normattiva da qui | Contenuto normativo |
+| 2 | **Verificare in ThinkRank** che lo schema pubblicato contenga un solo FAQPage e nessun "Article" (`view-source:`, cerca `application/ld+json`) | Doppioni |
+| 2 | **Un caso reale** con numeri (anche anonimo): verifica di una macchina non CE, audit di un parco macchine, un adeguamento chiavi in mano | Manca ancora su entrambe le landing |
+| 2 | **Link in entrata**: dalla landing revamping (aggiungere "adeguamento delle macchine" nel testo), dalla home, dal menu Servizi, dalla pagina Marcatura CE | Il link reciproco dalla revamping è già presente nel template di quella pagina, non nel testo |
+| 3 | **Link a Marcatura CE**: da aggiungere quando si sceglie tra `/marcatura-ce/` e `/marcatura-ce-2/` | URL da chiarire |
+| 3 | **Area servita nello schema**: ho scritto "Piemonte" e "Italia" (`schema/src/…`): confermare | Dato non verificabile da qui |
+| 3 | **Peso delle immagini** (JPG da `-scaled`, PNG delle icone `@4x`): convertire in WebP | Prestazioni |
 
-[[AGGIUNGERE un dato di esperienza verificabile, es. "Oltre N macchine verificate dal 20XX" e un caso reale anonimo.]]
+---
 
-### [H2] Domande frequenti sull'adeguamento delle macchine
+## 6. Come importare il template
 
-> Accordion di Elementor: domanda = titolo (tag **H3**), risposta = contenuto.
-> Il testo qui sotto è la **fonte** dello schema FAQ (`tools/genera_schema.py`).
+Come per la revamping:
+
+1. Elementor → **Template → Template salvati → Importa template** → `elementor/adeguamento-ottimizzata.json`.
+2. **Pagine → Aggiungi nuova** (bozza), template **Elementor a larghezza intera con header e footer** → Modifica con Elementor → icona cartella → Template salvati → **Inserisci**.
+3. Controllare anteprima su desktop, tablet e telefono: titoli, nuova tabella, sezione contatti unica.
+4. Copiare il contenuto nella pagina 7176 (o incollare le sezioni), poi ThinkRank (§2), alt (§5) e slider (§5).
+5. Aggiornare la pagina, svuotare la cache SiteGround, controllare il sorgente.
+
+L'import ricrea le immagini nella libreria (suffisso `-1`) e perde gli alt. Non l'ho provato su un WordPress; se dà errore la pagina live non cambia.
+
+---
+
+## 7. FAQ (fonte unica)
+
+Alimenta sia il template sia lo schema FAQPage. Dopo ogni modifica: `python3 tools/ottimizza_adeguamento.py <export.xml>` e `python3 tools/genera_schema.py`.
+
+Le risposte 1-7 sono quelle di Prosystem, con ritocchi minimi (1, 2) o riscritte (4). Le 8-12 sono nuove. Le affermazioni normative vanno verificate dall'ingegnere (§5).
 
 <!-- FAQ:START -->
-#### Cosa fare con una macchina senza marcatura CE?
-Se la macchina è stata immessa sul mercato prima del 21 settembre 1996, bisogna verificarne la conformità ai requisiti generali di sicurezza dell'Allegato V del D.Lgs. 81/08, eseguire gli eventuali interventi di adeguamento e documentare l'esito in una relazione tecnica. Se invece è successiva a quella data, serve una valutazione tecnica sul percorso di messa in conformità e marcatura CE.
+#### Una macchina con Marcatura CE è automaticamente conforme al D.Lgs. 81/08?
+La Marcatura CE attesta la conformità della macchina al momento della sua immissione sul mercato o messa in servizio secondo la normativa di prodotto applicabile. Il datore di lavoro deve comunque installarla, utilizzarla e mantenerla correttamente, verificando nel tempo che conservi condizioni di sicurezza adeguate (artt. 70 e 71 del D.Lgs. 81/08).
 
-#### Una macchina senza marcatura CE può essere usata in azienda?
-Sì, se è antecedente all'obbligo di marcatura CE e rispetta i requisiti dell'Allegato V del D.Lgs. 81/08. Il datore di lavoro deve poter dimostrare questa conformità, di norma con una relazione tecnica redatta da un professionista qualificato.
+#### Le macchine vecchie devono essere marcate CE?
+Non tutte le macchine datate devono essere marcate CE retroattivamente. Per le attrezzature costruite prima dell’applicazione delle direttive europee pertinenti (in Italia, prima del 21 settembre 1996) occorre verificare la conformità ai requisiti di sicurezza applicabili, tra cui quelli previsti dall’Allegato V del D.Lgs. 81/08.
 
-#### Chi deve adeguare le macchine: il datore di lavoro o il fabbricante?
-Il fabbricante risponde della conformità della macchina al momento dell'immissione sul mercato. Il datore di lavoro risponde della sicurezza delle attrezzature che mette a disposizione dei lavoratori e deve mantenerle conformi nel tempo (artt. 70 e 71 D.Lgs. 81/08), anche con interventi di adeguamento.
+#### Chi è responsabile della sicurezza delle macchine utilizzate in azienda?
+Il fabbricante è responsabile degli obblighi connessi alla conformità del prodotto. Il datore di lavoro ha invece l’obbligo di mettere a disposizione attrezzature idonee e sicure, installarle e utilizzarle correttamente e mantenerle in condizioni adeguate nel tempo.
 
-#### Una macchina marcata CE è sicura per sempre?
-No. La marcatura CE attesta la conformità al momento dell'immissione sul mercato. Usura, manutenzione carente, ripari rimossi, dispositivi di sicurezza esclusi o modifiche non documentate possono rendere la macchina non più sicura: il datore di lavoro deve controllarla periodicamente e intervenire.
+#### Una modifica richiede sempre una nuova Marcatura CE?
+No. Serve una nuova Marcatura CE quando la modifica è sostanziale: non prevista né pianificata dal fabbricante, incide sulla sicurezza della macchina creando un nuovo pericolo o aumentando un rischio esistente. In questo caso chi esegue la modifica assume gli obblighi del fabbricante: valutazione dei rischi, Fascicolo Tecnico, dichiarazione di conformità e Marcatura CE. Negli altri casi è consigliabile documentare la valutazione svolta. Soltanto un’analisi tecnica permette di stabilire quale procedura applicare. Approfondisci: [revamping dei macchinari industriali](https://prosystemengineering.com/revamping-macchinari-industriali/).
 
-#### Posso vendere una macchina usata senza marcatura CE?
-Sì, ma chi vende, noleggia o concede in uso una macchina non marcata CE deve attestare, sotto la propria responsabilità, che al momento della consegna è conforme ai requisiti dell'Allegato V del D.Lgs. 81/08 (art. 72). È consigliabile basare l'attestazione su una verifica tecnica documentata.
+#### Cosa comprende un audit di sicurezza delle macchine?
+L’audit può comprendere il censimento delle attrezzature, l’analisi delle norme applicabili, la verifica tecnica e documentale, l’individuazione delle non conformità e la definizione delle priorità di intervento.
 
-#### L'adeguamento di una macchina richiede una nuova marcatura CE?
-Non sempre. Gli interventi che migliorano la sicurezza senza cambiare prestazioni, funzioni o uso previsto di norma non richiedono una nuova marcatura CE. Se invece l'adeguamento è una modifica sostanziale, chi lo esegue diventa fabbricante e deve procedere con valutazione dei rischi, fascicolo tecnico, dichiarazione di conformità e marcatura CE.
+#### È possibile adeguare un’intera linea di produzione?
+Sì. L’analisi può riguardare le singole macchine, le interconnessioni, i sistemi di comando, gli accessi e i rischi generati dal funzionamento complessivo della linea.
+
+#### Prosystem può seguire anche la realizzazione degli interventi?
+Sì. Oltre all’analisi e alla progettazione, Prosystem Engineering può supportare l’esecuzione degli adeguamenti, coordinare le lavorazioni specialistiche e verificare gli interventi al termine dei lavori.
+
+#### Cosa fare con una macchina senza Marcatura CE?
+Occorre distinguere. Se la macchina è antecedente all’obbligo di Marcatura CE (in Italia dal 21 settembre 1996) si verifica la conformità ai requisiti dell’Allegato V del D.Lgs. 81/08, si eseguono gli eventuali interventi di adeguamento e si documenta l’esito in una relazione tecnica. Se invece è successiva a quella data ed è priva di marcatura, non basta l’Allegato V: serve una valutazione tecnica specifica sul percorso di messa in conformità.
+
+#### Posso vendere, noleggiare o concedere in uso una macchina usata non marcata CE?
+Chi vende, noleggia o concede in uso una macchina non conforme alle direttive di prodotto, ad esempio perché antecedente all’obbligo di Marcatura CE, deve attestare sotto la propria responsabilità che al momento della consegna è conforme ai requisiti dell’Allegato V del D.Lgs. 81/08 (art. 72). Conviene basare l’attestazione su una verifica tecnica documentata.
 
 #### Ogni quanto vanno controllate le macchine?
-L'art. 71 del D.Lgs. 81/08 richiede un controllo iniziale per le attrezzature la cui sicurezza dipende dall'installazione e controlli periodici con le frequenze indicate dal fabbricante, dalle norme di buona tecnica o dai codici di buona prassi. Alcune attrezzature, come gli apparecchi di sollevamento elencati nell'Allegato VII, sono inoltre soggette a verifiche periodiche obbligatorie.
-
-#### Quanto costa l'adeguamento di una macchina?
-Dipende dal numero e dal tipo di macchine, dal loro stato e dagli interventi necessari. Dopo il sopralluogo consegniamo una relazione con le non conformità rilevate e un piano di interventi con priorità e stima dei costi, così da poter pianificare l'investimento.
+L’art. 71 del D.Lgs. 81/08 richiede un controllo iniziale per le attrezzature la cui sicurezza dipende dalle condizioni di installazione e controlli periodici per quelle soggette a deterioramento, con frequenze indicate dal fabbricante, dalle norme tecniche o dalle buone prassi. Alcune attrezzature, come gli apparecchi di sollevamento elencati nell’Allegato VII, sono inoltre soggette a verifiche periodiche obbligatorie: vedi la [verifica degli impianti di sollevamento](https://prosystemengineering.com/verifica-impianti-di-sollevamento/).
 
 #### Quali sanzioni si rischiano con macchine non a norma?
-Il D.Lgs. 81/08 prevede per il datore di lavoro e i dirigenti sanzioni penali, con arresto o ammenda, per l'uso di attrezzature non conformi (art. 87). In caso di infortunio si aggiungono la responsabilità penale per lesioni o omicidio colposo e, per le lesioni gravi o gravissime, la responsabilità amministrativa dell'azienda ai sensi del D.Lgs. 231/2001.
+Il D.Lgs. 81/08 prevede sanzioni penali, con arresto o ammenda, per il datore di lavoro e i dirigenti che mettono a disposizione dei lavoratori attrezzature non conformi ai requisiti di sicurezza (art. 87). In caso di infortunio si aggiungono la responsabilità penale per lesioni o omicidio colposo e, per le violazioni delle norme sulla sicurezza, la possibile responsabilità amministrativa dell’azienda ai sensi del D.Lgs. 231/2001. Le sanzioni e i presupposti esatti dipendono dalla violazione contestata.
+
+#### Cosa cambia con il Regolamento Macchine (UE) 2023/1230?
+Dal 20 gennaio 2027 il Regolamento (UE) 2023/1230 sostituisce la Direttiva Macchine 2006/42/CE e si applica direttamente in tutti gli Stati membri. Per chi utilizza le macchine restano validi gli obblighi del D.Lgs. 81/08; cambia il modo di valutare le modifiche, perché il Regolamento definisce espressamente la modifica sostanziale, anche se eseguita con mezzi digitali, e attribuisce gli obblighi del fabbricante a chi la esegue.
 <!-- FAQ:END -->
 
-### [H2] Vuoi sapere se le tue macchine sono a norma?
-
-Indicaci quante macchine vuoi verificare, se sono marcate CE e il loro anno di costruzione: ti ricontattiamo per organizzare il sopralluogo.
-
-**Campi del form consigliati:** Nome e azienda · Email · Telefono · Numero di macchine · Marcatura CE (sì / no / misto / non so) · Motivo (ispezione, infortunio, acquisto o vendita di usato, audit, modifica) · Messaggio · Consenso privacy.
-
-**Contatti:** Prosystem Engineering S.r.l. · Via Vecchia di Buriasco 10/D, 10064 Pinerolo (TO) · Tel. 0121 39 86 28 · info@prosystemengineering.com
-
-### AUTORE E FONTI (blocco HTML E)
-
-Contenuto a cura di [[Nome Cognome]], [[ingegnere iscritto all'Ordine degli Ingegneri della Provincia di Torino, n. XXXX]], [[ruolo]] di Prosystem Engineering. Ultimo aggiornamento: [[gg mese aaaa]].
-
-Fonti normative: [D.Lgs. 81/2008](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81) · [Direttiva 2006/42/CE](https://eur-lex.europa.eu/eli/dir/2006/42/oj?locale=it) · [Regolamento (UE) 2023/1230](https://eur-lex.europa.eu/eli/reg/2023/1230/oj?locale=it)
-
 ---
 
-## 4. Link interni ed esterni
+## 8. Checklist pre-pubblicazione
 
-**In uscita da questa pagina:**
-
-| Anchor text | Destinazione | Dove |
-|---|---|---|
-| revamping dei macchinari industriali | `/revamping-macchinari-industriali/` | Sezioni "Macchine usate" e "Regolamento 2027" |
-| marcatura CE | `/marcatura-ce/` [[verificare URL canonico]] | Sezione "Documenti che ottieni" |
-| verifica degli impianti di sollevamento | `/verifica-impianti-di-sollevamento/` | "Perché Prosystem" (e FAQ Allegato VII) |
-| formazione | `/formazione/` | "Perché Prosystem" |
-
-**In entrata verso questa pagina (da aggiungere):**
-- Homepage e menu Servizi: "Adeguamento macchine D.Lgs. 81/08"
-- `/marcatura-ce/`: "Hai macchine già in uso da mettere a norma? Adeguamento macchine al D.Lgs. 81/08"
-- `/verifica-impianti-di-sollevamento/` e `/formazione/`: link contestuale
-- Landing revamping (link già previsto nel suo testo)
-- `/adeguamenti-per-la-sicurezza/` → **redirect 301** verso questa pagina (vedi strategia, §3)
-
----
-
-## 5. Immagini
-
-| Posizione | Nome file | Alt text (descrivere la foto reale) |
-|---|---|---|
-| Hero | `adeguamento-macchine-dlgs-81-08.webp` | Tecnico che verifica i ripari di una macchina industriale [[descrivere la foto reale]] |
-| Tabella CE / non CE | `macchina-marcata-ce-vs-non-ce.svg` | Schema: quali norme si applicano alle macchine con e senza marcatura CE |
-| Allegato V | `verifica-allegato-v-dispositivi-sicurezza.webp` | Arresto di emergenza e riparo interbloccato su una macchina adeguata all'Allegato V |
-
----
-
-## 6. Checklist pre-pubblicazione
-
-- [ ] Tutti i `[[...]]` completati o rimossi
-- [ ] Un solo H1; titolo del tema nascosto
-- [ ] Title e meta description inseriti nel plugin SEO
-- [ ] Schema `schema/adeguamento-macchine-marcatura-ce-dlgs-81-08.html` inserito e validato
-- [ ] FAQ visibili in pagina identiche allo schema
-- [ ] Redirect 301 da `/adeguamenti-per-la-sicurezza/` (dopo verifica in Search Console)
-- [ ] Link interni in entrata e in uscita inseriti
-- [ ] Data "Ultimo aggiornamento" e box autore visibili
-- [ ] Test mobile e PageSpeed (LCP < 2,5 s)
-- [ ] Richiesta di indicizzazione in Search Console e Bing Webmaster Tools
+- [ ] ThinkRank: titolo, meta description, schema WebPage, immagine social
+- [ ] Un solo `<h1>` nel sorgente (`view-source:`): quello dello slider
+- [ ] Alt impostati in Libreria media e controllati sulle immagini reali
+- [ ] CTA e pulsante dello slider scorrono al form da telefono; form provato
+- [ ] Schema: un solo FAQPage, nessun "Article"; Rich Results Test senza errori
+- [ ] Affermazioni normative verificate dall'ingegnere
+- [ ] Link in entrata inseriti (dalla landing revamping, home, menu, Marcatura CE)
+- [ ] Cache svuotata; indicizzazione richiesta in Search Console e Bing Webmaster Tools

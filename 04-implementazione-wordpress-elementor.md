@@ -35,11 +35,7 @@ In Elementor, aprire la pagina → pannello del plugin SEO (Yoast o Rank Math co
 
 ## 3. Testi e blocchi HTML
 
-1. **CSS una volta sola**: copiare `elementor/pse-stili.css` in *Elementor → Impostazioni sito → CSS personalizzato* (Elementor Pro) oppure in *Aspetto → Personalizza → CSS aggiuntivo*. Adattare i colori (`--pse-accento`) alla palette del sito.
-2. Testi normali: widget **Editor di testo**, incollando dal file della landing (i `**grassetti**` vanno applicati a mano o incollando dalla versione HTML).
-3. Box "In sintesi", tabelle, fasi del processo, callout e box autore: widget **HTML**, incollando il blocco corrispondente da `elementor/adeguamento-blocchi.html` (per la landing revamping vedi invece l'import del template, `02-…` §7).
-4. Sezione del form: *Avanzate → ID CSS* = `contatti` (i bottoni dell'hero puntano a `#contatti`).
-5. Cercare `[[` nella pagina prima di pubblicare: nessun segnaposto deve restare.
+I testi, le tabelle e i blocchi HTML delle due landing sono già nei template Elementor (`elementor/*-ottimizzata.json`, procedura in `02-…` §7 e `03-…` §6): gli stili delle tabelle sono nel widget stesso, non serve CSS aggiuntivo. Questa guida resta valida per il resto (schema, redirect, immagini, prestazioni, file nella root).
 
 ---
 

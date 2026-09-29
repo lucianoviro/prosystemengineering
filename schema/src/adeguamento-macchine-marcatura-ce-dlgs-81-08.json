@@ -3,9 +3,9 @@
   "faq_source": "03-landing-adeguamento-macchine-dlgs-81-08.md",
   "service": {
     "@type": "Service",
-    "name": "Adeguamento macchine al D.Lgs. 81/08 e marcatura CE",
-    "serviceType": "Verifica di conformità e messa a norma di macchine e attrezzature di lavoro",
-    "description": "Verifica di macchine con e senza marcatura CE rispetto al D.Lgs. 81/08 (Allegato V) e alla normativa di prodotto, valutazione dei rischi, progettazione degli interventi di messa a norma e documentazione tecnica di conformità.",
+    "name": "Adeguamento macchine al D.Lgs. 81/08 e Marcatura CE",
+    "serviceType": "Verifica di conformità, audit e adeguamento di macchine e attrezzature di lavoro",
+    "description": "Verifica di macchine e impianti con e senza Marcatura CE rispetto al D.Lgs. 81/08 (Allegato V) e alla normativa di prodotto: analisi dei rischi, individuazione delle non conformità, progettazione e coordinamento degli adeguamenti, verifica finale e aggiornamento della documentazione tecnica.",
     "provider": { "@id": "https://prosystemengineering.com/#organization" },
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Piemonte" },
@@ -13,7 +13,7 @@
     ],
     "audience": {
       "@type": "BusinessAudience",
-      "audienceType": "Datori di lavoro, RSPP e uffici tecnici di aziende che utilizzano macchine"
+      "audienceType": "Datori di lavoro, RSPP e uffici tecnici di aziende che utilizzano macchine e impianti industriali"
     },
     "isRelatedTo": { "@id": "https://prosystemengineering.com/revamping-macchinari-industriali/#service" },
     "hasOfferCatalog": {
@@ -21,11 +21,11 @@
       "name": "Servizi di adeguamento macchine",
       "itemListElement": [
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verifica dei requisiti dell'Allegato V D.Lgs. 81/08 per macchine non marcate CE" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verifica di conformità di macchine marcate CE" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Valutazione dei rischi delle macchine UNI EN ISO 12100" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Progettazione di ripari e circuiti di sicurezza" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Relazione tecnica per macchine usate (art. 72 D.Lgs. 81/08)" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marcatura CE di insiemi di macchine e macchine modificate" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verifica di macchine marcate CE e della relativa documentazione" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analisi dei rischi e individuazione delle non conformità" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit di sicurezza del parco macchine" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Adeguamento chiavi in mano: progettazione, coordinamento dei lavori, verifica e collaudo" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fascicolo Tecnico, manuale di uso e manutenzione e dichiarazioni di conformità" } }
       ]
     }
   }

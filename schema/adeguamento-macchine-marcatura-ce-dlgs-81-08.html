@@ -5,9 +5,9 @@
     {
       "@id": "https://prosystemengineering.com/adeguamento-macchine-marcatura-ce-e-d-lgs-81-08/#service",
       "@type": "Service",
-      "name": "Adeguamento macchine al D.Lgs. 81/08 e marcatura CE",
-      "serviceType": "Verifica di conformità e messa a norma di macchine e attrezzature di lavoro",
-      "description": "Verifica di macchine con e senza marcatura CE rispetto al D.Lgs. 81/08 (Allegato V) e alla normativa di prodotto, valutazione dei rischi, progettazione degli interventi di messa a norma e documentazione tecnica di conformità.",
+      "name": "Adeguamento macchine al D.Lgs. 81/08 e Marcatura CE",
+      "serviceType": "Verifica di conformità, audit e adeguamento di macchine e attrezzature di lavoro",
+      "description": "Verifica di macchine e impianti con e senza Marcatura CE rispetto al D.Lgs. 81/08 (Allegato V) e alla normativa di prodotto: analisi dei rischi, individuazione delle non conformità, progettazione e coordinamento degli adeguamenti, verifica finale e aggiornamento della documentazione tecnica.",
       "provider": {
         "@id": "https://prosystemengineering.com/#organization"
       },
@@ -23,7 +23,7 @@
       ],
       "audience": {
         "@type": "BusinessAudience",
-        "audienceType": "Datori di lavoro, RSPP e uffici tecnici di aziende che utilizzano macchine"
+        "audienceType": "Datori di lavoro, RSPP e uffici tecnici di aziende che utilizzano macchine e impianti industriali"
       },
       "isRelatedTo": {
         "@id": "https://prosystemengineering.com/revamping-macchinari-industriali/#service"
@@ -43,35 +43,35 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Verifica di conformità di macchine marcate CE"
+              "name": "Verifica di macchine marcate CE e della relativa documentazione"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Valutazione dei rischi delle macchine UNI EN ISO 12100"
+              "name": "Analisi dei rischi e individuazione delle non conformità"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Progettazione di ripari e circuiti di sicurezza"
+              "name": "Audit di sicurezza del parco macchine"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Relazione tecnica per macchine usate (art. 72 D.Lgs. 81/08)"
+              "name": "Adeguamento chiavi in mano: progettazione, coordinamento dei lavori, verifica e collaudo"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Marcatura CE di insiemi di macchine e macchine modificate"
+              "name": "Fascicolo Tecnico, manuale di uso e manutenzione e dichiarazioni di conformità"
             }
           }
         ]
@@ -86,50 +86,74 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Cosa fare con una macchina senza marcatura CE?",
+          "name": "Una macchina con Marcatura CE è automaticamente conforme al D.Lgs. 81/08?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se la macchina è stata immessa sul mercato prima del 21 settembre 1996, bisogna verificarne la conformità ai requisiti generali di sicurezza dell'Allegato V del D.Lgs. 81/08, eseguire gli eventuali interventi di adeguamento e documentare l'esito in una relazione tecnica. Se invece è successiva a quella data, serve una valutazione tecnica sul percorso di messa in conformità e marcatura CE."
+            "text": "La Marcatura CE attesta la conformità della macchina al momento della sua immissione sul mercato o messa in servizio secondo la normativa di prodotto applicabile. Il datore di lavoro deve comunque installarla, utilizzarla e mantenerla correttamente, verificando nel tempo che conservi condizioni di sicurezza adeguate (artt. 70 e 71 del D.Lgs. 81/08)."
           }
         },
         {
           "@type": "Question",
-          "name": "Una macchina senza marcatura CE può essere usata in azienda?",
+          "name": "Le macchine vecchie devono essere marcate CE?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì, se è antecedente all'obbligo di marcatura CE e rispetta i requisiti dell'Allegato V del D.Lgs. 81/08. Il datore di lavoro deve poter dimostrare questa conformità, di norma con una relazione tecnica redatta da un professionista qualificato."
+            "text": "Non tutte le macchine datate devono essere marcate CE retroattivamente. Per le attrezzature costruite prima dell’applicazione delle direttive europee pertinenti (in Italia, prima del 21 settembre 1996) occorre verificare la conformità ai requisiti di sicurezza applicabili, tra cui quelli previsti dall’Allegato V del D.Lgs. 81/08."
           }
         },
         {
           "@type": "Question",
-          "name": "Chi deve adeguare le macchine: il datore di lavoro o il fabbricante?",
+          "name": "Chi è responsabile della sicurezza delle macchine utilizzate in azienda?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Il fabbricante risponde della conformità della macchina al momento dell'immissione sul mercato. Il datore di lavoro risponde della sicurezza delle attrezzature che mette a disposizione dei lavoratori e deve mantenerle conformi nel tempo (artt. 70 e 71 D.Lgs. 81/08), anche con interventi di adeguamento."
+            "text": "Il fabbricante è responsabile degli obblighi connessi alla conformità del prodotto. Il datore di lavoro ha invece l’obbligo di mettere a disposizione attrezzature idonee e sicure, installarle e utilizzarle correttamente e mantenerle in condizioni adeguate nel tempo."
           }
         },
         {
           "@type": "Question",
-          "name": "Una macchina marcata CE è sicura per sempre?",
+          "name": "Una modifica richiede sempre una nuova Marcatura CE?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. La marcatura CE attesta la conformità al momento dell'immissione sul mercato. Usura, manutenzione carente, ripari rimossi, dispositivi di sicurezza esclusi o modifiche non documentate possono rendere la macchina non più sicura: il datore di lavoro deve controllarla periodicamente e intervenire."
+            "text": "No. Serve una nuova Marcatura CE quando la modifica è sostanziale: non prevista né pianificata dal fabbricante, incide sulla sicurezza della macchina creando un nuovo pericolo o aumentando un rischio esistente. In questo caso chi esegue la modifica assume gli obblighi del fabbricante: valutazione dei rischi, Fascicolo Tecnico, dichiarazione di conformità e Marcatura CE. Negli altri casi è consigliabile documentare la valutazione svolta. Soltanto un’analisi tecnica permette di stabilire quale procedura applicare. Approfondisci: revamping dei macchinari industriali."
           }
         },
         {
           "@type": "Question",
-          "name": "Posso vendere una macchina usata senza marcatura CE?",
+          "name": "Cosa comprende un audit di sicurezza delle macchine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì, ma chi vende, noleggia o concede in uso una macchina non marcata CE deve attestare, sotto la propria responsabilità, che al momento della consegna è conforme ai requisiti dell'Allegato V del D.Lgs. 81/08 (art. 72). È consigliabile basare l'attestazione su una verifica tecnica documentata."
+            "text": "L’audit può comprendere il censimento delle attrezzature, l’analisi delle norme applicabili, la verifica tecnica e documentale, l’individuazione delle non conformità e la definizione delle priorità di intervento."
           }
         },
         {
           "@type": "Question",
-          "name": "L'adeguamento di una macchina richiede una nuova marcatura CE?",
+          "name": "È possibile adeguare un’intera linea di produzione?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non sempre. Gli interventi che migliorano la sicurezza senza cambiare prestazioni, funzioni o uso previsto di norma non richiedono una nuova marcatura CE. Se invece l'adeguamento è una modifica sostanziale, chi lo esegue diventa fabbricante e deve procedere con valutazione dei rischi, fascicolo tecnico, dichiarazione di conformità e marcatura CE."
+            "text": "Sì. L’analisi può riguardare le singole macchine, le interconnessioni, i sistemi di comando, gli accessi e i rischi generati dal funzionamento complessivo della linea."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Prosystem può seguire anche la realizzazione degli interventi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. Oltre all’analisi e alla progettazione, Prosystem Engineering può supportare l’esecuzione degli adeguamenti, coordinare le lavorazioni specialistiche e verificare gli interventi al termine dei lavori."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa fare con una macchina senza Marcatura CE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Occorre distinguere. Se la macchina è antecedente all’obbligo di Marcatura CE (in Italia dal 21 settembre 1996) si verifica la conformità ai requisiti dell’Allegato V del D.Lgs. 81/08, si eseguono gli eventuali interventi di adeguamento e si documenta l’esito in una relazione tecnica. Se invece è successiva a quella data ed è priva di marcatura, non basta l’Allegato V: serve una valutazione tecnica specifica sul percorso di messa in conformità."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso vendere, noleggiare o concedere in uso una macchina usata non marcata CE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chi vende, noleggia o concede in uso una macchina non conforme alle direttive di prodotto, ad esempio perché antecedente all’obbligo di Marcatura CE, deve attestare sotto la propria responsabilità che al momento della consegna è conforme ai requisiti dell’Allegato V del D.Lgs. 81/08 (art. 72). Conviene basare l’attestazione su una verifica tecnica documentata."
           }
         },
         {
@@ -137,15 +161,7 @@
           "name": "Ogni quanto vanno controllate le macchine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "L'art. 71 del D.Lgs. 81/08 richiede un controllo iniziale per le attrezzature la cui sicurezza dipende dall'installazione e controlli periodici con le frequenze indicate dal fabbricante, dalle norme di buona tecnica o dai codici di buona prassi. Alcune attrezzature, come gli apparecchi di sollevamento elencati nell'Allegato VII, sono inoltre soggette a verifiche periodiche obbligatorie."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quanto costa l'adeguamento di una macchina?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dipende dal numero e dal tipo di macchine, dal loro stato e dagli interventi necessari. Dopo il sopralluogo consegniamo una relazione con le non conformità rilevate e un piano di interventi con priorità e stima dei costi, così da poter pianificare l'investimento."
+            "text": "L’art. 71 del D.Lgs. 81/08 richiede un controllo iniziale per le attrezzature la cui sicurezza dipende dalle condizioni di installazione e controlli periodici per quelle soggette a deterioramento, con frequenze indicate dal fabbricante, dalle norme tecniche o dalle buone prassi. Alcune attrezzature, come gli apparecchi di sollevamento elencati nell’Allegato VII, sono inoltre soggette a verifiche periodiche obbligatorie: vedi la verifica degli impianti di sollevamento."
           }
         },
         {
@@ -153,7 +169,15 @@
           "name": "Quali sanzioni si rischiano con macchine non a norma?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Il D.Lgs. 81/08 prevede per il datore di lavoro e i dirigenti sanzioni penali, con arresto o ammenda, per l'uso di attrezzature non conformi (art. 87). In caso di infortunio si aggiungono la responsabilità penale per lesioni o omicidio colposo e, per le lesioni gravi o gravissime, la responsabilità amministrativa dell'azienda ai sensi del D.Lgs. 231/2001."
+            "text": "Il D.Lgs. 81/08 prevede sanzioni penali, con arresto o ammenda, per il datore di lavoro e i dirigenti che mettono a disposizione dei lavoratori attrezzature non conformi ai requisiti di sicurezza (art. 87). In caso di infortunio si aggiungono la responsabilità penale per lesioni o omicidio colposo e, per le violazioni delle norme sulla sicurezza, la possibile responsabilità amministrativa dell’azienda ai sensi del D.Lgs. 231/2001. Le sanzioni e i presupposti esatti dipendono dalla violazione contestata."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa cambia con il Regolamento Macchine (UE) 2023/1230?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dal 20 gennaio 2027 il Regolamento (UE) 2023/1230 sostituisce la Direttiva Macchine 2006/42/CE e si applica direttamente in tutti gli Stati membri. Per chi utilizza le macchine restano validi gli obblighi del D.Lgs. 81/08; cambia il modo di valutare le modifiche, perché il Regolamento definisce espressamente la modifica sostanziale, anche se eseguita con mezzi digitali, e attribuisce gli obblighi del fabbricante a chi la esegue."
           }
         }
       ]

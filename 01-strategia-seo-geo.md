@@ -20,7 +20,7 @@ Il sito **non è raggiungibile** dall'ambiente di lavoro (dominio bloccato dalla
 - analisi dei risultati di ricerca per le keyword target e dei concorrenti;
 - normativa vigente al 24/09/2026 (D.Lgs. 81/08, Direttiva 2006/42/CE, Regolamento (UE) 2023/1230 applicabile dal 20/01/2027).
 
-La landing revamping è stata riscritta sui contenuti reali (`02-…`). La landing adeguamento è ancora una bozza generica (`03-…`) da rifare sull'export. La checklist al §7 elenca le verifiche da fare sul sito live.
+La landing revamping è stata riscritta sui contenuti reali (`02-…`). Anche la landing adeguamento è stata rifatta sull'export (`03-…`). La checklist al §7 elenca le verifiche da fare sul sito live.
 
 ---
 

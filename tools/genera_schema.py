@@ -53,31 +53,32 @@ def write(name, data):
     print(f"scritto schema/{name}.html")
 
 
+def page_graph(src):
+    """Service + FAQPage di una landing (schema/src/<pagina>.json); FAQ lette dal file .md indicato."""
+    page = json.loads(Path(src).read_text(encoding="utf-8"))
+    url = page["url"]
+    service = {"@id": f"{url}#service", **page["service"], "url": url}
+    faq = read_faq(ROOT / page["faq_source"])
+    faq_page = {
+        "@type": "FAQPage",
+        "@id": f"{url}#faq",
+        "url": url,
+        "inLanguage": "it-IT",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in faq
+        ],
+    }
+    return {"@context": "https://schema.org", "@graph": [service, faq_page]}
+
+
 def main():
     write("organization", json.loads((SRC / "organization.json").read_text(encoding="utf-8")))
 
     for src in sorted(SRC.glob("*.json")):
         if src.stem == "organization":
             continue
-        page = json.loads(src.read_text(encoding="utf-8"))
-        url = page["url"]
-        service = {"@id": f"{url}#service", **page["service"], "url": url}
-        faq = read_faq(ROOT / page["faq_source"])
-        faq_page = {
-            "@type": "FAQPage",
-            "@id": f"{url}#faq",
-            "url": url,
-            "inLanguage": "it-IT",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": q,
-                    "acceptedAnswer": {"@type": "Answer", "text": a},
-                }
-                for q, a in faq
-            ],
-        }
-        write(src.stem, {"@context": "https://schema.org", "@graph": [service, faq_page]})
+        write(src.stem, page_graph(src))
 
 
 if __name__ == "__main__":
