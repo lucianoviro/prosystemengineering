@@ -46,8 +46,8 @@ CTA_BUTTONS = ["8949db4", "ab0a4d3", "c247953", "271187d"]
 
 # id widget -> (inizio del testo atteso, nuovo tag, nuovo testo o None)
 HEADINGS = {
-    "581665e": ("AGGIORNA IL TUO IMPIANTO", "h1",
-                "REVAMPING DI MACCHINARI INDUSTRIALI: AGGIORNA IL TUO IMPIANTO SENZA SOSTITUIRLO"),
+    # l'H1 della pagina è il titolo del Revolution Slider ("PROGETTAZIONE REVAMPING MACCHINARI INDUSTRIALI")
+    "581665e": ("AGGIORNA IL TUO IMPIANTO", "h2", None),
     "e31cbeb": ("QUANDO IL REVAMPING", "h2", None),
     "8c4a228": ("PROLUNGA LA VITA", "h3", None),
     "10b127a": ("MIGLIORA LE PRESTAZIONI", "h3", None),

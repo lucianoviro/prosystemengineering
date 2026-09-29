@@ -21,7 +21,7 @@ Come applicare le modifiche:
 | # | Rilievo | Impatto | Correzione |
 |---|---|---|---|
 | 1 | **Titolo SEO, meta description e parola chiave Yoast sono quelli della home**: "Prosystem Engineering \| Consulenza e progettazione", parola chiave "consulenza". La pagina è un duplicato (origine ID 4734). Lo stesso vale per la landing adeguamento | **Alto**: due pagine con lo stesso titolo e la stessa descrizione, nessuna ottimizzazione per "revamping" | Nuovi valori al §2 (a mano, Yoast) |
-| 2 | **9 titoli H1** nel corpo (uno per sezione, più i due della sezione contatti duplicata). Il primo titolo della pagina, che contiene la frase più importante, è un **H4**; nessun titolo contiene "macchinari industriali" in posizione di H1 | **Medio-alto**: la gerarchia non dice a Google e alle AI di cosa parla la pagina | Un solo H1 con la keyword, le sezioni diventano H2, i sottotitoli H3 (§3) |
+| 2 | **9 titoli H1** nel corpo (uno per sezione, più i due della sezione contatti duplicata), oltre all'H1 dello slider. Il primo titolo nel corpo, con la frase più importante, è un **H4**; nessun titolo contiene "macchinari industriali" in posizione di H1 | **Medio-alto**: la gerarchia non dice a Google e alle AI di cosa parla la pagina | Un solo H1 con la keyword, le sezioni diventano H2, i sottotitoli H3 (§3) |
 | 3 | I 4 bottoni CTA puntano a `#richiedi-una-valutazione`, ma la sezione con quell'ID è **nascosta su mobile** (esiste una copia separata per il mobile, senza ID) | **Alto sulle conversioni**: su telefono i bottoni molto probabilmente non scorrono al form (da provare) | Ancora su un elemento sempre visibile (§4) |
 | 4 | **Nessun link interno**: l'unico link è l'ancora al form. Nemmeno verso la landing adeguamento, pur citando D.Lgs. 81/08 e Marcatura CE | Medio: la pagina non passa né riceve autorità dalle pagine sorelle | Link nel testo della sezione sicurezza e nelle FAQ (§4) |
 | 5 | **Sezione contatti duplicata** (desktop e mobile): nell'HTML ci sono due volte titolo, indirizzo, mappa e lo stesso form (WPForms 6971), con ID del form duplicati | Medio: contenuto ripetuto, peso delle due mappe | Titoli della copia mobile declassati a testo. Per il resto vedi §5 |
@@ -29,7 +29,7 @@ Come applicare le modifiche:
 | 7 | **FAQ**: 7 domande numerate ("1. …") in un accordion i cui titoli non sono heading; il widget non genera schema FAQ. La risposta sulla Marcatura CE è corretta ma generica | Medio | Titoli H3, 9 domande, risposta CE precisa (§6) |
 | 8 | **Contenuti mancanti**: definizione in apertura, confronto revamping/retrofit/macchina nuova, definizione di modifica sostanziale e Regolamento 2023/1230, autore, data, fonti, caso reale | Medio (GEO): sono gli elementi che le AI citano | Aggiunti dove possibile (§4); il resto al §5 |
 | 9 | Nelle impostazioni compare anche un plugin di punteggio SEO (ThinkRank) accanto a Yoast | Da verificare: metadati o schema doppi nel `<head>` | §5 |
-| 10 | **Non verificabile dall'export**: il testo dello slider in cima alla pagina (Revolution Slider "contatti-1") | Se contiene un titolo H1 se ne aggiungerebbe un secondo | §5 |
+| 10 | **Non verificabile dall'export**: il testo dello slider in cima alla pagina (Revolution Slider "contatti-1") | Risulta contenere l'H1 "PROGETTAZIONE REVAMPING MACCHINARI INDUSTRIALI" (dallo screenshot): resta l'H1 della pagina | §3, §5 |
 
 Punti di forza da mantenere: testo scritto bene e coerente, sezione sicurezza già impostata correttamente ("non necessariamente" una nuova Marcatura CE), processo in 6 passi, FAQ già presenti, un solo obiettivo di conversione.
 
@@ -50,12 +50,12 @@ Punti di forza da mantenere: testo scritto bene e coerente, sezione sicurezza gi
 
 ## 3. Gerarchia dei titoli: prima e dopo
 
-I titoli hanno tutti tipografia personalizzata: cambiare il tag non cambia l'aspetto. L'unica differenza visibile è il nuovo testo dell'H1.
+I titoli hanno tutti tipografia personalizzata: cambiare il tag non cambia l'aspetto. Nessuna differenza visibile. **L'unico H1 è il titolo dello slider** ("PROGETTAZIONE REVAMPING MACCHINARI INDUSTRIALI"), che contiene già la keyword e viene per primo: il titolo sotto lo slider è un H2 con il testo originale.
 
 <!-- OUTLINE:START -->
 | Titolo | Prima | Dopo |
 |---|---|---|
-| AGGIORNA IL TUO IMPIANTO SENZA SOSTITUIRLO → **REVAMPING DI MACCHINARI INDUSTRIALI: AGGIORNA IL TUO IMPIANTO SENZA SOSTITUIRLO** | H4 | **H1** |
+| AGGIORNA IL TUO IMPIANTO SENZA SOSTITUIRLO | H4 | **H2** |
 | QUANDO IL REVAMPING È LA SCELTA GIUSTA | H3 | **H2** |
 | PROLUNGA LA VITA DELL'IMPIANTO | H4 | **H3** |
 | MIGLIORA LE PRESTAZIONI E L'AFFIDABILITÀ | H4 | **H3** |
@@ -77,7 +77,7 @@ I titoli hanno tutti tipografia personalizzata: cambiare il tag non cambia l'asp
 | REVAMPING, RETROFIT O MACCHINA NUOVA? *(nuova sezione)* | — | **H2** |
 | Domande delle FAQ (9, senza numerazione) | testo semplice | **H3** |
 
-**Riepilogo**: prima 9 H1, 5 H2, primo titolo della pagina in H4. Dopo: **1 H1**, 10 H2, sottotitoli e slogan come testo semplice, FAQ in H3. Le righe della sezione contatti presenti due volte (desktop e mobile) sono la stessa sezione: in mobile diventano testo normale.
+**Riepilogo**: nel corpo, prima 9 H1, 5 H2 e primo titolo in H4. Dopo: **0 H1 nel corpo** (l'H1 è quello dello slider), 11 H2, sottotitoli e slogan come testo semplice, FAQ in H3. Le righe della sezione contatti presenti due volte (desktop e mobile) sono la stessa sezione: in mobile diventano testo normale.
 <!-- OUTLINE:END -->
 
 Restano invariati i titoli H3/H4 dentro gli editor di testo (passi del processo, blocchi "Perché scegliere", sezione sicurezza): il loro aspetto dipende dal tema e cambiarli richiederebbe di ridefinire gli stili. I passi del processo restano H4 sotto un H2: un salto di livello innocuo per Google, da sistemare solo se si vuole la perfezione.
@@ -88,7 +88,7 @@ Restano invariati i titoli H3/H4 dentro gli editor di testo (passi del processo,
 
 `elementor/revamping-ottimizzata.json` è la pagina attuale con queste modifiche, e nient'altro:
 
-1. **Titoli**: un H1, sezioni H2, sottotitoli e slogan da H2 a testo semplice (§3). Nuovo testo dell'H1: *"REVAMPING DI MACCHINARI INDUSTRIALI: AGGIORNA IL TUO IMPIANTO SENZA SOSTITUIRLO"* (va a capo su due righe).
+1. **Titoli**: sezioni H2, sottotitoli e slogan da H2 a testo semplice (§3). L'H1 resta quello dello slider.
 2. **Definizione in apertura**, prima del paragrafo esistente:
    > Il revamping di un macchinario industriale è l'intervento con cui una macchina o un impianto già in uso viene aggiornato, modificato o riprogettato per migliorarne prestazioni, affidabilità, funzionalità e sicurezza, senza doverlo sostituire.
 3. **Nuova sezione "Revamping, retrofit o macchina nuova?"** con tabella di confronto, dopo "Quando il revamping è la scelta giusta". Le definizioni di manutenzione, retrofit e revamping sono quelle già scritte da Prosystem nella FAQ.
@@ -107,7 +107,7 @@ Il file **non contiene segnaposto**: tutto quello che c'è è pubblicabile. Auto
 | Priorità | Attività | Perché |
 |---|---|---|
 | 1 | **Yoast**: inserire titolo, meta e parola chiave (§2) | Non si importano con Elementor |
-| 1 | **Slider in cima**: aprire Revolution Slider → "Landing REVAMPING" e controllare se il testo grande è un layer con tag H1–H6. Se sì, impostarlo su `div` o `p` (la pagina ha già il suo H1) | Evita un doppio H1; il testo dello slider non è nell'export |
+| 1 | **Slider in cima**: aprire Revolution Slider → "Landing REVAMPING" e verificare che il layer del titolo sia un H1 (lo è) e che compaia nel sorgente della pagina pubblicata (`Ctrl+U`, cerca `<h1`). Se manca, lo slider lo disegna via JavaScript: in quel caso l'H1 va rimesso nel corpo | Evita un doppio H1; il testo dello slider non è nell'export |
 | 1 | **Provare i CTA da telefono** dopo la pubblicazione | Verifica del punto 3 del §1 |
 | 2 | **Autore e data**: aggiungere sotto le FAQ un blocco "Contenuto a cura di [nome], ingegnere iscritto all'Ordine [provincia, n.]. Ultimo aggiornamento: [data]" | E-E-A-T: chi firma un contenuto normativo |
 | 2 | **Un caso reale** (anche anonimo) in una sezione dedicata: settore, macchina, problema, intervento, esito normativo, risultati misurabili | È quello che più aumenta le citazioni delle AI; oggi la pagina non ha nessun dato reale |
@@ -162,7 +162,7 @@ Dal 20 gennaio 2027 il Regolamento (UE) 2023/1230 sostituisce la Direttiva Macch
 
 1. Elementor → **Template → Template salvati → Importa template** → scegliere `elementor/revamping-ottimizzata.json`.
 2. **Pagine → Aggiungi nuova** (bozza), titolo "Revamping (bozza)", template pagina **Elementor a larghezza intera con header e footer** (come l'originale) → *Modifica con Elementor* → icona cartella → **Template salvati** → *Inserisci* "Revamping macchinari industriali (ottimizzata)".
-3. Controllare l'anteprima su desktop, tablet e telefono: aspetto dei titoli, nuova tabella, H1 su due righe, CTA che scorrono al form.
+3. Controllare l'anteprima su desktop, tablet e telefono: aspetto dei titoli, nuova tabella, CTA che scorrono al form.
 4. Se tutto è a posto, due strade equivalenti:
    - copiare il contenuto della bozza nella pagina 6969 (o incollare le sezioni), oppure
    - pubblicare la bozza con slug `/revamping-macchinari-industriali/` **dopo aver cambiato lo slug della pagina vecchia** (e copiando le impostazioni Yoast). La prima è più sicura: non cambia l'URL né la cronologia.
@@ -188,7 +188,7 @@ Il template contiene lo shortcode dello slider e i widget WPForms/EAEL già usat
 ## 9. Checklist pre-pubblicazione
 
 - [ ] Yoast: titolo, meta description e parola chiave aggiornati
-- [ ] Un solo H1 nel sorgente (`Ctrl+U`, cerca `<h1`), slider compreso
+- [ ] Un solo `<h1>` nel sorgente (`Ctrl+U`): quello dello slider
 - [ ] I 4 CTA scorrono al form su desktop **e** su telefono
 - [ ] Tabella leggibile su telefono (scorre in orizzontale)
 - [ ] Testi alternativi controllati sulle immagini reali
